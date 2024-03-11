@@ -47,4 +47,11 @@ body, html {
     background-attachment: scroll;
     min-height: 400px;
   }
+
+  .gcalendar {
+    /* Have it shrink to fit the screen */
+    width: 100%;
+    height: 400px;
+
+  }
 }
