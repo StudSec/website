@@ -55,3 +55,23 @@ body, html {
 
   }
 }
+
+.w3-container .w3-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.w3-container .w3-button:hover {
+  background-color: #555;
+  color: white;
+}
+
+.signup-button {
+  background-color: rgba(0, 0, 255, 0.5);
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) 10px, transparent 10px, transparent 20px);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
