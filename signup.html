@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up - VU StudSec</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sign up for VU StudSec, the CyberSecurity Association at VU Amsterdam">
+    <!-- meta tags for linkedin cause we ARE NOT STORM-->
+    <meta name="title" property="og:title" content="Sign Up - VU StudSec">
+    <meta property="og:type" content="Informative Website">
+    <meta name="image" property="og:image" content="https://studsec.nl/images/studsec_with_background_unoptimized.png">
+    <meta name="description" property="og:description"
+        content="Join VU StudSec and become a part of a dedicated CyberSecurity community.">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Import bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="icon" href="images/favi.png">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+            <a href="index.html#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+            <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i>CTF</a>
+            <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i
+                    class="fa fa fa-book"></i>WIKI</a>
+            <a href="index.html#contact" class="w3-bar-item w3-button w3-hide-small"><i
+                    class="fa fa-envelope"></i> CONTACT</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="index.html#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+            <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()">CTF</a>
+            <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button"
+                onclick="toggleFunction()">WIKI</a>
+            <a href="index.html#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+        </div>
+    </div>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <img class="logo-title" src="images/studsec-wbg.svg" alt="Logo" style="width:50%;">
+            <span class="logo-title w3-center w3-padding-large w3-black w3-xlarge w3-wide"> VU STUDSEC</span>
+        </div>
+    </div>
+
+    <!-- Container (Sign Up Section) -->
+<div class="w3-content w3-container w3-padding-64" id="signup">
+    <h3 class="w3-center">SIGN UP</h3>
+    <p class="w3-center"><em>Join our community and start your journey in CyberSecurity!</em></p>
+  
+    <!-- New section for committees description -->
+    <div class="w3-center w3-padding-32">
+      <h4>Our Committees</h4>
+      <p>VU StudSec is organized into several committees, each with its own set of responsibilities and focus areas. <br> All members can join! Below is a brief description of each committee.</p>
+    </div>
+  
+    <div class="w3-row-padding w3-center w3-padding-32" id="committees">
+      <div class="w3-third w3-section">
+        <i class="fa fa-calendar fa-2x w3-margin-bottom"></i>
+        <h4>Events</h4>
+        <p>The events committee is responsible for organizing social events like borrels, activities, and meetups.</p>
+      </div>
+      <div class="w3-third w3-section">
+        <i class="fa fa-graduation-cap fa-2x w3-margin-bottom"></i>
+        <h4>Workshops</h4>
+        <p>Organizes and prepares the workshops centered around cybersecurity topics. Documentation is also handled by this committee.</p>
+      </div>
+      <div class="w3-third w3-section">
+        <i class="fa fa-cogs fa-2x w3-margin-bottom"></i>
+        <h4>Infrastructure</h4>
+        <p>Maintains and improves StudSec’s infrastructure, including the CTF platform and Discord bot, and manages challenges.</p>
+      </div>
+      <div class="w3-third w3-section">
+        <i class="fa fa-trophy fa-2x w3-margin-bottom"></i>
+        <h4>VU CTF</h4>
+        <p>Organizes the annual VU CTF, including creating and testing challenges. Note: Being in this committee bars you from  participating.</p>
+      </div>
+      <div class="w3-third w3-section">
+        <i class="fa fa-users fa-2x w3-margin-bottom"></i>
+        <h4>CTF Team</h4>
+        <p>Manages the CTF team, planning events, coordinating players, and ensuring everything is organized for participation.</p>
+      </div>
+      <div class="w3-third w3-section">
+        <i class="fa fa-money fa-2x w3-margin-bottom"></i>
+        <h4>ScroogeCie</h4>
+        <p>Verifies the financial records at the end of the year, presenting findings during a member meeting.</p>
+      </div>
+    </div>
+  
+    <div class="w3-center w3-padding-32">
+      <p><em>Scroll down to fill out the form and join VU StudSec!</em></p>
+    </div>
+  
+    <div class="w3-row-padding w3-center">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeLtet7cZJp-3dZeOGTn6OQNgUEOoodi-RL-GGS9nUpTY63jg/viewform?embedded=true" width="100%" height="1077" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+  </div>
+
+    <div class="w3-container w3-center w3-padding-32">
+        <a href="index.html" class="w3-button w3-black w3-round-large">Back to Home</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+            <i class="fa bi bi-discord w3-hover-opacity" onclick="window.open('https://url.studsec.nl/discord', '_blank')"></i>
+            <i class="fa bi bi-github w3-hover-opacity" onclick="window.open('https://github.com/StudSec/', '_blank')"></i>
+            <i class="fa bi bi-linkedin w3-hover-opacity"
+                onclick="window.open('https://www.linkedin.com/company/vustudsec/', '_blank')"></i>
+            <i class="fa bi bi-instagram w3-hover-opacity"
+                onclick="window.open('https://www.instagram.com/studsec.nl/', '_blank')"></i>
+            <i class="fa bi bi-twitter w3-hover-opacity"
+                onclick="window.open('https://twitter.com/vustudsec/', '_blank')"></i>
+        </div>
+    </footer>
+
+    <script>
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+</body>
+
+</html>
