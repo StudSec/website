@@ -1,4 +1,4 @@
-body,h1,h2,h3,h4,h5,h6 { font-family: "Lato", sans-serif; }
+body, h1, h2, h3, h4, h5, h6 { font-family: "Lato", sans-serif; }
 body, html {
   height: 100%;
   color: #777;
@@ -23,7 +23,6 @@ body, html {
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1200px) {
-
   .logo-title {
     /* Have it go below the image */
     display: block;
@@ -35,6 +34,7 @@ body, html {
   }
 }
 
+/* Ensure iframe is responsive */
 iframe {
   border: solid 1px #777;
   width: 100%;
@@ -51,12 +51,20 @@ p {
   margin-bottom: 20px;
 }
 
-#w3-container {
-  text-align: center;
+/* Section title and description styles */
+.w3-center h4 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
-#committees .w3-third {
-  width: 30%; /* Adjust if necessary to fit within 100% */
+.w3-center p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Committee section styles */
+#w3-container {
+  text-align: center;
 }
 
 #w3-third i {
@@ -73,6 +81,7 @@ p {
   line-height: 1.5;
 }
 
+/* Navigation button styles */
 .w3-container .w3-button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -84,12 +93,15 @@ p {
   color: white;
 }
 
-.w3-center h4 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .w3-center p {
-    font-size: 1.2em;
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .w3-third {
+    width: 100%;
     margin-bottom: 20px;
   }
+
+  /* Adjust iframe height for smaller screens */
+  iframe {
+    height: 1200px;
+  }
+}
