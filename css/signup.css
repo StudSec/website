@@ -67,7 +67,13 @@ p {
   text-align: center;
 }
 
-#w3-third i {
+#committees .w3-quarter {
+  width: 23.5%; /* Adjust to fit within 100% (4 columns inside 100%) */
+  margin: 1%; /* Slight margins to space elements nicely */
+}
+
+.w3-third i,
+.w3-quarter i {
   font-size: 3em;
 }
 
@@ -95,7 +101,8 @@ p {
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
-  .w3-third {
+  .w3-third,
+  .w3-quarter {
     width: 100%;
     margin-bottom: 20px;
   }
