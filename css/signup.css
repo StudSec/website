@@ -1,4 +1,4 @@
-body, h1, h2, h3, h4, h5, h6 { font-family: "Lato", sans-serif; }
+body,h1,h2,h3,h4,h5,h6 { font-family: "Lato", sans-serif; }
 body, html {
   height: 100%;
   color: #777;
@@ -58,7 +58,8 @@ p {
 }
 
 .w3-center p {
-  font-size: 1.2em;
+  font-size: 1em; /* Smaller font size for the description */
+  line-height: 1.5;
   margin-bottom: 20px;
 }
 
@@ -67,24 +68,32 @@ p {
   text-align: center;
 }
 
-#committees .w3-quarter {
-  width: 23.5%; /* Adjust to fit within 100% (4 columns inside 100%) */
-  margin: 1%; /* Slight margins to space elements nicely */
+#committees .w3-third {
+  width: 31%; /* Adjust to fit within 100% */
+  margin-left: 1%; /* Slight margins to space elements nicely */
 }
 
-.w3-third i,
-.w3-quarter i {
-  font-size: 3em;
+#committees .w3-third:first-child,
+#committees .w3-third:nth-child(4) {
+  margin-left: 0;
+}
+
+#committees i {
+  font-size: 4em; /* Increased size for better visibility */
+  margin-bottom: 15px;
 }
 
 #committees h4 {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-size: 1.4em; /* Adjusted font size for better readability */
 }
 
 #committees p {
   font-size: 1em;
   line-height: 1.5;
+  margin: 0 auto;
+  max-width: 300px; /* Limit the width for better readability */
 }
 
 /* Navigation button styles */
@@ -101,10 +110,10 @@ p {
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
-  .w3-third,
-  .w3-quarter {
+  .w3-third {
     width: 100%;
     margin-bottom: 20px;
+    margin-left: 0;
   }
 
   /* Adjust iframe height for smaller screens */
@@ -112,3 +121,38 @@ p {
     height: 1200px;
   }
 }
+
+/* Use Flexbox for committees section */
+#committees {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  #committees .w3-third {
+    flex: 1 1 calc(33.33% - 1%); /* Adjust to fit within 100% */
+    margin: 0.5%; /* Slight margins to space elements nicely */
+  }
+  
+  #committees .w3-third:nth-child(3n+1) {
+    margin-left: 0;
+  }
+  
+  #committees .w3-third:nth-child(3n+3) {
+    margin-right: 0;
+  }
+  
+  /* Additional responsive adjustments */
+  @media (max-width: 900px) {
+    #committees {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #committees .w3-third {
+      width: 90%;
+      margin-bottom: 20px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
