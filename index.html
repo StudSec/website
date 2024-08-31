@@ -16,6 +16,7 @@
 <!-- Import bootstrap -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">    
 <link rel="icon" href="images/favi.png">
+<script src="js/nav.js"></script>
 
 <link rel="stylesheet" href="css/index.css">
 </head>
@@ -23,25 +24,29 @@
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i>CTF</a>
-    <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa fa-book"></i>WIKI</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="signup.html" class="w3-button w3-round-large" id="signup-button">Join us</a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()">CTF</a>
-    <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa fa-book"></i>WIKI</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-  </div>
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="#home" class="w3-bar-item w3-button">HOME</a>
+      <a href="index.html#calendar" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-calendar"></i> CALENDAR</a>
+      <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-trophy"></i>CTF</a>
+      <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa fa-book"></i>WIKI</a>
+      <a href="contact.html#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="contact.html#faq" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-question-circle"></i> FAQ</a>
+      <a href="signup.html" class="w3-button w3-round-large" id="signup-button"><i class="fa fa-check-square-o"></i>Join us</a>
+    </div>
+  
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
+      <a href="index.html#calendar" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-calendar"></i> CALENDAR</a>
+      <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-trophy"></i> CTF</a>
+      <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa fa-book"></i> WIKI</a>
+      <a href="contact.html#contact" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="contact.html#faq" class="w3-bar-item w3-button w3-hide-small" onclick="toggleFunction()"><i class="fa fa-question-circle"></i> FAQ</a>
+      <a href="signup.html" class="w3-bar-item w3-button w3-round-large" onclick="toggleFunction()"><i class="fa fa-check-square-o"></i> Join us</a>
+    </div>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
@@ -57,13 +62,22 @@
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">ABOUT US</h3>
   <p class="w3-center"><em>Lowering the barrier to entry in this ever more difficult field</em></p>
-  <p>We are VU StudSec, a CyberSecurity Association based at VU Amsterdam dedicated to lowering the barrier to entry in the CyberSecurity field. This mission is carried out by hosting workshops and tutorials regarding various sectors of cybersecurity in combination with constant mentoring from proffesionals in the field. 
-    Our objective is to provide a platform for students to learn and grow in the field of CyberSecurity. We also provide a platform for students to share their knowledge and experience with other students which can be found <a target="_blank" href="https://discord.gg/Ce5mrVBzqP">here</a>.
+  <p>
+    We are VU StudSec, a Student CyberSecurity Association based at VU Amsterdam, committed to making the CyberSecurity field more accessible to every student. Our mission is fulfilled through hosting workshops and tutorials across various sectors of cybersecurity, complemented by continuous mentorship from industry professionals. Our goal is to offer a platform for students to learn and grow through practical experience, networking, and knowledge sharing.
+  </p>
+  <p>
+    We understand that cybersecurity might not appeal to everyone, but we firmly believe that everyone has the potential to succeed in this field. To put this belief into action, we strive to make our basic workshops accessible to individuals with zero background knowledge. By doing so, we empower them to apply security principles to everyone, ultimately contributing to a safer world.
+  </p>
+  <p>
+    Moreover, we are a non-profit organization. Over the past three years, we have largely funded our activities out of pocket because we are driven by a desire for systematic change. We do not discriminate or selectively support social causes and collaborations; instead, we encourage participation from everyone, regardless of their background. We are dedicated to fostering a safe and inclusive environment where everyone feels welcome and supported.
+  </p>
+  <p>
+    We also provide a platform for students to share their knowledge and experiences with others. Join our community and connect with like-minded individuals <a target="_blank" href="https://discord.gg/Ce5mrVBzqP">here</a>.
   </p>
   <p class="w3-large w3-center w3-padding-16">Our story:</p>
   <p>
     Starting from 2 students working in cybersecurity in september 2021, today 
-    we have over 350 students with a wide range of skill levels, from experienced professionals to eager new students just starting out. 
+    we have over 400 students with a wide range of skill levels, from experienced professionals to eager new students just starting out. 
     We are holding bi-weekly events and training sessions in order to expand the general community awareness, 
     as well as technical workshops related to cybersecurity for both offensive and defensive operations. 
     Our motive for the mentors of this community are to provide the helping hand nobody had years ago, when cybersecurity was still a new field.
@@ -71,10 +85,8 @@
 </div>
   
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">2+</span><br>
-    Mentors
-  </div>  <div class="w3-quarter w3-section">
+  
+    <div class="w3-quarter w3-section">
     <span class="w3-xlarge">1</span><br>
     Nation-Wide CTF
   </div>
@@ -95,7 +107,7 @@
 <div class="w3-content w3-container w3-padding-64" id="calendar">  
 <h3 class="w3-center">Our calendar</h3> 
 <p class="w3-center"><em>Hack N' Chill meetings are not shown, as they are voted within our discord server!</em></p><br>
-<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FAmsterdam&bgcolor=%2350a8e5&src=ZGY0OGEzOTM3YmZjMWEyNjIwNGFlYjc2OWRhODQ3NzhiNmRmZGE1YmU0ZTFkNzBhY2I5MWM3MWZkNjI2ZDc4ZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NjQ0MjE5YTJhMDE2NWU2YmQzNWE4YzYwOWQ0NDJlYTUzOWM3OGMxNjA3MDk2MzBlMWRiZDkzYjg0Y2MwZWI1MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23D50000&color=%23EF6C00" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no" class="w3-center gcalendar"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FAmsterdam&bgcolor=%2350a8e5&src=c_7973268d7a019bd2b163e02c1af626467a52ad62d02ccb71f6d6c16c5a2ec694%40group.calendar.google.com&src=NjQ0MjE5YTJhMDE2NWU2YmQzNWE4YzYwOWQ0NDJlYTUzOWM3OGMxNjA3MDk2MzBlMWRiZDkzYjg0Y2MwZWI1MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23D50000&color=%23EF6C00" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no" class="w3-center gcalendar"></iframe>
 </div>
 
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
@@ -120,16 +132,17 @@
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
   <h3 class="w3-center">WE ARE SUPPORTED BY</h3>
-  <p class="w3-center"><em>Here are some of the organisations helping us carry out our mission.</p><br>
+  <p class="w3-center"><em>Here are some of the organisations helping us carry out our mission.</em></p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-        <!-- Onclick redirect to https://storm.vu/ in a new tab -->
-      <img src="images/vubar.png" style="width:100%" class="w3-hover-opacity" alt="vubar logo" onclick="window.open('https://vusec.net/', '_blank')">
-    </div>
-    <div class="w3-col m3">
-      <img src="images/do.png" style="width:100%" class="w3-hover-opacity" alt="do logo" onclick="window.open('https://www.digitalocean.com/', '_blank')">
+        <div class="w3-col m3">
+            <!-- Onclick redirect to https://storm.vu/ in a new tab -->
+        <img src="images/vubar.png" style="width:100%" class="w3-hover-opacity" alt="vubar logo" onclick="window.open('https://vusec.net/', '_blank')">
+        </div>
+        <div class="w3-col m3">
+        <img src="images/do.png" style="width:100%" class="w3-hover-opacity" alt="do logo" onclick="window.open('https://www.digitalocean.com/', '_blank')">
+        </div>
     </div>
 </div>
 
@@ -145,27 +158,27 @@
 <!-- Third Parallax Image with Portfolio Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+     <span class="w3-xxlarge w3-text-white w3-wide">Get in Touch</span>
   </div>
 </div>
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">WHERE WE ARE AT</h3>
-  <p class="w3-center"><em>Feel free to reach us!</em></p>
 
-  <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      <img src="images/sitting_looking_at_philippos.jpg" class="w3-image w3-round" style="width:100%">
+<!-- Contact Section -->
+<!-- Contact Section --> 
+<!-- Contact Section --> 
+<div class="w3-content w3-container w3-padding-64" id="contact"> 
+    <p class="w3-center w3-large">We’d love to hear from you!</p>
+    
+    <p>If you have any questions, comments, or inquiries, please feel free to reach out to us. Our dedicated team is here to assist you. For further information and Frequently Asked Questions, you can visit our <a href="contact.html#faq" class="w3-text-blue">FAQ page</a>.</p> 
+
+    <div class="w3-center w3-margin-top">
+        <a href="/contact.html#contact" class="w3-button w3-black w3-hover-orange w3-round-large w3-margin-right">Contact Us</a>
+        <a href="/contact.html#faq" class="w3-button w3-blue w3-hover-light-blue w3-round-large">Visit FAQ</a>
     </div>
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Amsterdam, The Netherlands<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: info@studsec.nl<br>
-      </div>
-    </div>
-  </div>
 </div>
+</body>
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
@@ -179,29 +192,5 @@
   </div>
 </footer>
  
-<script>
 
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
-
-</body>
 </html>
