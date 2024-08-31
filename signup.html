@@ -2,16 +2,17 @@
 <html>
 
 <head>
-    <title>Sign Up - VU StudSec</title>
+    <title>Sign Up - StudSec</title>
     <meta charset="UTF-8">
+    <script src="js/nav.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Sign up for VU StudSec, the CyberSecurity Association at VU Amsterdam">
+    <meta name="description" content="Sign up for StudSec, the CyberSecurity Association at VU Amsterdam">
     <!-- meta tags for linkedin cause we ARE NOT STORM-->
-    <meta name="title" property="og:title" content="Sign Up - VU StudSec">
+    <meta name="title" property="og:title" content="Sign Up - StudSec">
     <meta property="og:type" content="Informative Website">
     <meta name="image" property="og:image" content="https://studsec.nl/images/studsec_with_background_unoptimized.png">
     <meta name="description" property="og:description"
-        content="Join VU StudSec and become a part of a dedicated CyberSecurity community.">
+        content="Join StudSec and become a part of a dedicated CyberSecurity community.">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet"
@@ -24,37 +25,36 @@
 
 <body>
 
-    <!-- Navbar (sit on top) -->
-    <div class="w3-top">
-        <div class="w3-bar" id="myNavbar">
-            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
-                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-                <i class="fa fa-bars"></i>
-            </a>
-            <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-            <a href="index.html#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-            <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i>CTF</a>
-            <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i
-                    class="fa fa fa-book"></i>WIKI</a>
-            <a href="index.html#contact" class="w3-bar-item w3-button w3-hide-small"><i
-                    class="fa fa-envelope"></i> CONTACT</a>
-        </div>
-
-        <!-- Navbar on small screens -->
-        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-            <a href="index.html#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-            <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()">CTF</a>
-            <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button"
-                onclick="toggleFunction()">WIKI</a>
-            <a href="index.html#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-        </div>
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="index.html#home" class="w3-bar-item w3-button">HOME</a>
+      <a href="index.html#calendar" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-calendar"></i> CALENDAR</a>
+      <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-trophy"></i>CTF</a>
+      <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa fa-book"></i>WIKI</a>
+      <a href="contact.html#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="contact.html#faq" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-question-circle"></i> FAQ</a>
+      <a href="signup.html" class="w3-button w3-round-large" id="signup-button"><i class="fa fa-check-square-o"></i>Join us</a>
     </div>
-
+  
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
+      <a href="index.html#calendar" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-calendar"></i> CALENDAR</a>
+      <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-trophy"></i> CTF</a>
+      <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa fa-book"></i> WIKI</a>
+      <a href="contact.html#contact" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="contact.html#faq" class="w3-bar-item w3-button w3-hide-small" onclick="toggleFunction()"><i class="fa fa-question-circle"></i> FAQ</a>
+      <a href="signup.html" class="w3-bar-item w3-button w3-round-large" onclick="toggleFunction()"><i class="fa fa-check-square-o"></i> Join us</a>
+    </div>
+</div>
     <!-- First Parallax Image with Logo Text -->
     <div class="bgimg-1 w3-display-container">
         <div class="w3-display-middle" style="white-space:nowrap;">
             <img class="logo-title" src="images/studsec-wbg.svg" alt="Logo" style="width:50%;">
-            <span class="logo-title w3-center w3-padding-large w3-black w3-xlarge w3-wide"> VU STUDSEC</span>
+            <span class="logo-title w3-center w3-padding-large w3-black w3-xlarge w3-wide"> StudSec</span>
         </div>
     </div>
 
@@ -62,11 +62,45 @@
     <div class="w3-content w3-container w3-padding-64" id="signup">
     <h3 class="w3-center">SIGN UP</h3>
     <p class="w3-center"><em>Join our community and start your journey in CyberSecurity!</em></p>
-  
+    <!-- Enhanced section for committees description -->
+
+    <!-- Enhanced section for committees description -->
+    <h4>Benefits of Being a Member...</h4>
+    <div class="w3-row-padding w3-center w3-padding-32" id="committees">
+      <div class="w3-third w3-section">
+        <i class="fa fa-rocket fa-2x w3-margin-bottom"></i>
+        <h4>Advanced Learning Opportunities</h4>
+        <p>Participate in advanced workshops, guest lectures, and specialized sessions to delve deeper into complex cybersecurity topics beyond the basic curriculum.</p>
+      </div>
+      <div class="w3-third w3-section">
+        <i class="fa fa-trophy fa-2x w3-margin-bottom"></i>
+        <h4>Competition Excellence</h4>
+        <p>Compete internationally with our renowned CTF Team VUBar, consistently ranked among the best Dutch teams globally. Beginners can also join our junior team to learn and grow in CTF events.</p>
+      </div>
+      <div class="w3-third w3-section">
+        <i class="fa fa-users fa-2x w3-margin-bottom"></i>
+        <h4>Community and Networking</h4>
+        <p>Connect with fellow members through social activities like borrels, meetups, and various events, fostering a supportive and vibrant community.</p>
+      </div>
+      <div class="w3-third w3-section">
+        <i class="fa fa-briefcase fa-2x w3-margin-bottom"></i>
+        <h4>Internship Bridge Program</h4>
+        <p>Access our dedicated program to secure internships in the cybersecurity field, bridging the gap between academic learning and professional experience.</p>
+      </div>
+      <div class="w3-third w3-section">
+        <i class="fa fa-cogs fa-2x w3-margin-bottom"></i>
+        <h4>Committee Involvement</h4>
+        <p>Play an active role in our organization by joining committees. Help plan and execute events, workshops, and CTFs, gaining valuable leadership, organizational and or technical skills.</p>
+      </div>
+  </div>
+
+
     <!-- New section for committees description -->
     <div class="w3-center w3-padding-32">
       <h4>Our Committees</h4>
-      <p>VU StudSec is organized into several committees, each with its own set of responsibilities and focus areas. Below is a brief description of each committee.</p>
+      <p>StudSec is organized into several committees, each with its own set of responsibilities and focus areas. Below is a brief description of each committee. 
+         For more information on the committees, please visit the <a href="https://wiki.studsec.nl/committees">wiki</a>.
+      </p>
     </div>
   
     <div class="w3-row-padding w3-center w3-padding-32" id="committees">
@@ -103,7 +137,7 @@
     </div>
   
     <div class="w3-center w3-padding-32">
-      <p><em>Scroll down to fill out the form and join VU StudSec!</em></p>
+      <p><em>Scroll down to fill out the form and join StudSec!</em></p>
     </div>
   
     <div class="w3-row-padding w3-center">
@@ -114,10 +148,6 @@
   <div class="w3-container w3-center w3-padding-32">
     <a href="index.html" class="w3-button w3-black w3-round-large">Back to Home</a>
   </div>
-
-    <div class="w3-container w3-center w3-padding-32">
-        <a href="index.html" class="w3-button w3-black w3-round-large">Back to Home</a>
-    </div>
 
     <!-- Footer -->
     <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
