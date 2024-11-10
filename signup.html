@@ -298,6 +298,7 @@
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*' // Allow CORS
               },
+              mode: 'cors', // Ensure CORS is handled
               body: JSON.stringify(data)
             });
             const result = await response.json();
