@@ -142,10 +142,92 @@
   
     <div class="w3-center w3-padding-32">
       <p><em>Scroll down to fill out the form and join StudSec!</em></p>
+      <p>The membership fee is 5 euros according to the <a href="https://wiki.studsec.nl/books/rules-statutes" target="_blank">statutes and house rules</a>.</p>
     </div>
   
     <div class="w3-row-padding w3-center">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeLtet7cZJp-3dZeOGTn6OQNgUEOoodi-RL-GGS9nUpTY63jg/viewform?embedded=true" width="100%" height="1077" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <form id="signup-form" class="w3-container w3-card-4 w3-light-grey w3-text-black w3-margin">
+        <h2 class="w3-center">Sign Up Form</h2>
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+          <div class="w3-rest">
+            <input class="w3-input w3-border" name="full_name" type="text" placeholder="Full Name" required>
+          </div>
+        </div>
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope"></i></div>
+          <div class="w3-rest">
+            <input class="w3-input w3-border" name="email" type="email" placeholder="Email" required>
+          </div>
+        </div>
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-calendar"></i></div>
+          <div class="w3-rest">
+            <input class="w3-input w3-border" name="date_of_birth" type="date" placeholder="Date of Birth" required>
+          </div>
+        </div>
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
+          <div class="w3-rest">
+            <input class="w3-input w3-border" name="phone_number" type="text" placeholder="Phone Number" required>
+          </div>
+        </div>
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:50px">
+            <i class="w3-xxlarge fa fa-phone"></i>
+            <i class="fa fa-info-circle w3-small" title="This number will be used in case of emergencies, such as feeling unwell during an event. Optional"></i>
+          </div>
+          <div class="w3-rest">
+            <input class="w3-input w3-border" name="emergency_contact_phone" type="text" placeholder="Emergency Contact Phone (Optional)">
+          </div>
+        </div>
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-university"></i></div>
+          <div class="w3-rest">
+            <select class="w3-select w3-border" name="educational_institute" id="educational-institute" required>
+              <option value="" disabled selected>Choose your educational institute</option>
+              <option value="VU Amsterdam (Vrije Universiteit Amsterdam)">VU Amsterdam (Vrije Universiteit Amsterdam)</option>
+              <option value="UvA (Universiteit van Amsterdam)">UvA (Universiteit van Amsterdam)</option>
+              <option value="HvA (Hogeschool van Amsterdam)">HvA (Hogeschool van Amsterdam)</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="w3-row w3-section" id="other-institute-section" style="display:none;">
+          <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-university"></i></div>
+          <div class="w3-rest">
+            <input class="w3-input w3-border" name="other_institute" type="text" placeholder="Please specify your educational institute">
+          </div>
+        </div>
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-book"></i></div>
+          <div class="w3-rest">
+            <input class="w3-input w3-border" name="course_of_study" type="text" placeholder="Course of Study" required>
+          </div>
+        </div>
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-picture-o"></i></div>
+          <div class="w3-rest">
+            <p>Do we have permission to post pictures containing your face on social media?</p>
+            <p>At StudSec, we value your privacy. Before each event, we kindly ask attendees for permission to take photographs for social media promotions. To streamline our logistics and ensure a smooth experience for everyone, it's helpful for us to know your preferences in advance. Please note that you can change your option at any time.</p>
+            <label>
+              <input class="w3-radio" name="permission_to_post_pictures" type="radio" value="true" required>
+              Yes, I consent to having pictures of me on social media.
+            </label><br>
+            <label>
+              <input class="w3-radio" name="permission_to_post_pictures" type="radio" value="false" required>
+              No, I do not consent to having any pictures of me on social media.
+            </label>
+          </div>
+        </div>
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-robot"></i></div>
+          <div class="w3-rest">
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAzs4z30nKGvXSP7"></div>
+          </div>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-section w3-blue w3-ripple w3-padding">Submit</button>
+      </form>
     </div>
   </div>
   
@@ -168,6 +250,7 @@
         </div>
     </footer>
 
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script>
         // Change style of navbar on scroll
         window.onscroll = function () { myFunction() };
@@ -189,6 +272,41 @@
                 x.className = x.className.replace(" w3-show", "");
             }
         }
+
+        document.getElementById('educational-institute').addEventListener('change', function() {
+          var otherInstituteSection = document.getElementById('other-institute-section');
+          if (this.value === 'Other') {
+            otherInstituteSection.style.display = 'block';
+          } else {
+            otherInstituteSection.style.display = 'none';
+          }
+        });
+
+        document.getElementById('signup-form').addEventListener('submit', async function(event) {
+          event.preventDefault();
+          const formData = new FormData(event.target);
+          const data = Object.fromEntries(formData.entries());
+          data.permission_to_post_pictures = formData.get('permission_to_post_pictures') === 'on';
+          if (data.educational_institute === 'Other') {
+            data.educational_institute = formData.get('other_institute');
+          }
+      
+          try {
+            const response = await fetch('https://one.studsec.nl/api/signup', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data)
+            });
+            const result = await response.json();
+            if (response.ok) {
+              window.location.href = result.payment_link;
+            } else {
+              alert('Error: ' + result.message);
+            }
+          } catch (error) {
+            alert('Error: ' + error.message);
+          }
+        });
     </script>
 </body>
 
