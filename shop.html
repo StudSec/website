@@ -1,5 +1,3 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -48,6 +46,10 @@
                 </div>
         </header>
 
+        <div class="mobile-cart-icon" onclick="showCart()">
+            <span class="material-symbols-outlined">shopping_cart</span>
+        </div>
+
         <main>
             <div class="container_all">
                 <div class="title_container">
@@ -73,12 +75,13 @@
                                         </button>
                                     </div>
                                     <p class="name_item">StudSec T-shirt</p>
+                                    <p class="description_item">Comfortable and stylish T-shirt with StudSec logo.</p>
                                     <p class="price_item">15.00</p>
                                     <div class="size_quantity_container">
                                         <label for="size">
                                             <span class="material-symbols-outlined">straighten</span>
                                         </label>
-                                        <select name="size" id="size">
+                                        <select name="size" id="size" class="styled-select">
                                             <option value="S">S</option>
                                             <option value="M">M</option>
                                             <option value="L">L</option>
@@ -87,7 +90,7 @@
                                         <label for="quantity">
                                             <span class="material-symbols-outlined">format_list_numbered</span>
                                         </label>
-                                        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                                        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" class="styled-input">
                                     </div>
                                     <button class="add_to_cart" onclick="addToCart(this)">
                                         <span class="material-symbols-outlined">add_shopping_cart</span> Add to cart
@@ -109,12 +112,13 @@
                                         </button>
                                     </div>
                                     <p class="name_item">StudSec Hoodie</p>
+                                    <p class="description_item">Warm and cozy hoodie with StudSec logo.</p>
                                     <p class="price_item">30.00</p>
                                     <div class="size_quantity_container">
                                         <label for="size">
                                             <span class="material-symbols-outlined">straighten</span>
                                         </label>
-                                        <select name="size" id="size">
+                                        <select name="size" id="size" class="styled-select">
                                             <option value="S">S</option>
                                             <option value="M">M</option>
                                             <option value="L">L</option>
@@ -123,7 +127,7 @@
                                         <label for="quantity">
                                             <span class="material-symbols-outlined">format_list_numbered</span>
                                         </label>
-                                        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                                        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" class="styled-input">
                                     </div>
                                     <button class="add_to_cart" onclick="addToCart(this)">
                                         <span class="material-symbols-outlined">add_shopping_cart</span> Add to cart
@@ -145,12 +149,13 @@
                                         </button>
                                     </div>
                                     <p class="name_item">Stickers</p>
+                                    <p class="description_item">Set of cool StudSec stickers.</p>
                                     <p class="price_item">3.00</p>
                                     <div class="size_quantity_container">
                                         <label for="size">
                                             <span class="material-symbols-outlined">straighten</span>
                                         </label>
-                                        <select name="size" id="size">
+                                        <select name="size" id="size" class="styled-select">
                                             <option value="S">S</option>
                                             <option value="M">M</option>
                                             <option value="L">L</option>
@@ -159,7 +164,7 @@
                                         <label for="quantity">
                                             <span class="material-symbols-outlined">format_list_numbered</span>
                                         </label>
-                                        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                                        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" class="styled-input">
                                     </div>
                                     <button class="add_to_cart" onclick="addToCart(this)">
                                         <span class="material-symbols-outlined">add_shopping_cart</span> Add to cart
