@@ -82,6 +82,11 @@ function addToCart(button) {
     itemPrice.textContent = `€${(price * quantity).toFixed(2)}`;
     cartItem.appendChild(itemName);
     cartItem.appendChild(itemPrice);
+    const removeIcon = document.createElement('span');
+    removeIcon.className = 'remove-item';
+    removeIcon.textContent = 'x';
+    removeIcon.onclick = () => removeFromCart(removeIcon, price * quantity);
+    cartItem.appendChild(removeIcon);
     cart.appendChild(cartItem);
 
     updateSubtotal(price * quantity);
@@ -97,10 +102,22 @@ function addToCart(button) {
         document.querySelector('.cart .stop_message').style.display = 'none';
     }
 
-    if (totalItems > 0) {
-        document.querySelector('.cart .ideal_fee').style.display = 'block';
+}
+
+function removeFromCart(button, amount) {
+    const cartItem = button.closest('li');
+    cartItem.remove();
+    updateSubtotal(-amount);
+
+    const totalItems = Array.from(document.querySelector('.cart ul').querySelectorAll('li')).reduce((sum, li) => {
+        const qty = parseInt(li.querySelector('.item_name').textContent.split(' x ')[0]);
+        return sum + qty;
+    }, 0);
+
+    if (totalItems > 20) {
+        document.querySelector('.cart .stop_message').style.display = 'block';
     } else {
-        document.querySelector('.cart .ideal_fee').style.display = 'none';
+        document.querySelector('.cart .stop_message').style.display = 'none';
     }
 }
 
@@ -109,8 +126,8 @@ function updateSubtotal(amount) {
     subtotal += amount;
     document.querySelector('.cart .subtotal').textContent = `Subtotal: €${subtotal.toFixed(2)}`;
 
-    const mollieFee = subtotal * 0.018 + 0.25;
-    document.querySelector('.cart .mollie_fee').textContent = `Mollie Fee: €${mollieFee.toFixed(2)}`;
+    document.getElementById('cart-sum').textContent = `Sum: €${subtotal.toFixed(2)}`;
+    document.getElementById('mobile-cart-sum').textContent = `Sum: €${subtotal.toFixed(2)}`;
 }
 
 function showCustomerInfo() {
@@ -132,8 +149,6 @@ function showOverview() {
         <p>Email: ${email}</p>
         <p>Phone: ${phone}</p>
         <p>Subtotal: ${document.querySelector('.cart .subtotal').textContent}</p>
-        <p>${document.querySelector('.cart .mollie_fee').textContent}</p>
-        <p>${document.querySelector('.cart .cc_fee').textContent}</p>
     `;
 
     document.querySelector('.order_details').innerHTML = orderDetails;
@@ -154,4 +169,13 @@ function showCart() {
 function submitOrder() {
     alert('Order submitted!');
     // Add order submission logic here
+}
+
+function toggleCart() {
+    var cartModal = document.getElementById("cartModal");
+    if (cartModal.style.display === "block") {
+        cartModal.style.display = "none";
+    } else {
+        cartModal.style.display = "block";
+    }
 }
