@@ -224,6 +224,7 @@
             <div class="cf-turnstile" data-sitekey="0x4AAAAAAAzs4z30nKGvXSP7"></div>
           </div>
         </div>
+        <div id="error-message" class="w3-text-red" style="display:none;"></div>
         <button type="submit" class="w3-button w3-block w3-section w3-blue w3-ripple w3-padding">Register</button>
       </form>
     </div>
@@ -292,7 +293,8 @@
           // Validate date of birth format
           const dobPattern = /^\d{4}-\d{2}-\d{2}$/;
           if (!dobPattern.test(data.date_of_birth)) {
-            alert('Invalid Date of Birth. Please use the format YYYY-MM-DD.');
+            document.getElementById('error-message').innerText = 'Invalid Date of Birth. Please use the format YYYY-MM-DD.';
+            document.getElementById('error-message').style.display = 'block';
             return;
           }
       
@@ -309,13 +311,17 @@
             const result = await response.json();
             if (response.ok) {
               window.location.href = result.payment_link;
-            } else if (response.status === 401) {
-              alert('Unauthorized: Please check your credentials.');
             } else {
-              alert('Error: ' + result.message);
+              if (result.error === 'Member already exists') {
+                document.getElementById('error-message').innerText = 'This email is already registered. Please use a different email.';
+              } else {
+                document.getElementById('error-message').innerText = result.message;
+              }
+              document.getElementById('error-message').style.display = 'block';
             }
           } catch (error) {
-            alert('Error: ' + error.message);
+            document.getElementById('error-message').innerText = 'Error: ' + error.message;
+            document.getElementById('error-message').style.display = 'block';
           }
         });
     </script>

@@ -156,3 +156,10 @@ p {
       margin-right: 0;
     }
   }
+
+/* Error message styles */
+#error-message {
+  margin-top: 10px;
+  font-size: 1em;
+  color: red;
+}
