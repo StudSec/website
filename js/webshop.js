@@ -63,7 +63,7 @@ function addToCart(button) {
     const itemContent = button.closest('.item_content');
     const name = itemContent.querySelector('.name_item').textContent;
     const size = itemContent.querySelector('#size').value;
-    const quantity = itemContent.querySelector('#quantity').value;
+    const quantity = parseInt(itemContent.querySelector('#quantity').value);
     const price = parseFloat(itemContent.querySelector('.price_item').textContent);
 
     const cart = document.querySelector('.cart ul');
@@ -79,18 +79,66 @@ function addToCart(button) {
     itemName.textContent = `${quantity} x ${name} (Size: ${size})`;
     const itemPrice = document.createElement('span');
     itemPrice.className = 'item_price';
-    itemPrice.textContent = `$${(price * quantity).toFixed(2)}`;
+    itemPrice.textContent = `€${(price * quantity).toFixed(2)}`;
     cartItem.appendChild(itemName);
     cartItem.appendChild(itemPrice);
     cart.appendChild(cartItem);
 
     updateSubtotal(price * quantity);
 
-    alert(`Added ${quantity} ${name}(s) of size ${size} to cart.`);
+    const totalItems = Array.from(cart.querySelectorAll('li')).reduce((sum, li) => {
+        const qty = parseInt(li.querySelector('.item_name').textContent.split(' x ')[0]);
+        return sum + qty;
+    }, 0);
+
+    if (totalItems > 20) {
+        document.querySelector('.cart .stop_message').style.display = 'block';
+    } else {
+        document.querySelector('.cart .stop_message').style.display = 'none';
+    }
+
+    if (totalItems > 0) {
+        document.querySelector('.cart .ideal_fee').style.display = 'block';
+    } else {
+        document.querySelector('.cart .ideal_fee').style.display = 'none';
+    }
 }
 
 function updateSubtotal(amount) {
-    let subtotal = parseFloat(document.querySelector('.cart .subtotal').textContent.replace('Subtotal: $', '')) || 0;
+    let subtotal = parseFloat(document.querySelector('.cart .subtotal').textContent.replace('Subtotal: €', '')) || 0;
     subtotal += amount;
-    document.querySelector('.cart .subtotal').textContent = `Subtotal: $${subtotal.toFixed(2)}`;
+    document.querySelector('.cart .subtotal').textContent = `Subtotal: €${subtotal.toFixed(2)}`;
+
+    const mollieFee = subtotal * 0.018 + 0.25;
+    document.querySelector('.cart .mollie_fee').textContent = `Mollie Fee: €${mollieFee.toFixed(2)}`;
+}
+
+function showCustomerInfo() {
+    document.querySelector('.cart').style.display = 'none';
+    document.querySelector('.customer_info').style.display = 'block';
+}
+
+function showOverview() {
+    const name = document.querySelector('#name').value;
+    const email = document.querySelector('#email').value;
+    const phone = document.querySelector('#phone').value;
+
+    const orderDetails = `
+        <p>Name: ${name}</p>
+        <p>Email: ${email}</p>
+        <p>Phone: ${phone}</p>
+        <p>Subtotal: ${document.querySelector('.cart .subtotal').textContent}</p>
+        <p>${document.querySelector('.cart .mollie_fee').textContent}</p>
+        <p>${document.querySelector('.cart .cc_fee').textContent}</p>
+    `;
+
+    document.querySelector('.order_details').innerHTML = orderDetails;
+
+    document.querySelector('.customer_info').style.display = 'none';
+    document.querySelector('.overview').style.display = 'block';
+}
+
+function submitOrder() {
+    alert('Order submitted!');
+    // Add order submission logic here
 }

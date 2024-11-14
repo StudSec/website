@@ -88,6 +88,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;    
     gap: 10px;          
+    align-self: flex-start; /* Ensure items are aligned at the start */
 }
 
 .items {
@@ -181,6 +182,7 @@ h1 {
     width: 25%;
     min-width: 250px;
     background-color: white;
+    align-self: flex-start; /* Ensure cart is aligned at the start */
 }
 
 /* .item_content {
@@ -312,6 +314,44 @@ h1 {
 .cart .subtotal {
     margin-top: 10px;
     font-weight: bold;
+}
+
+.customer_info, .overview {
+    display: none;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.627);
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.customer_info label, .overview label {
+    display: block;
+    margin-top: 10px;
+}
+
+.customer_info input, .overview input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.customer_info button, .overview button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.customer_info button:hover, .overview button:hover {
+    background-color: #333;
 }
 
 footer {

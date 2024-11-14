@@ -172,10 +172,30 @@
                     <div class="right_side">
                         <div class="cart">
                             <h3>My cart</h3>
+                            <p class="stop_message" style="display: none; color: red; font-weight: bold;">Please stop</p>
                             <hr class="line">
                             <ul></ul>
-                            <p class="subtotal">Subtotal: $0.00</p>
-                            <button>Buy</button>
+                            <p class="ideal_fee" style="display: none;">iDEAL Fee: €0.32</p>
+                            <p class="subtotal">Subtotal: €0.00</p>
+                            <p class="mollie_fee" style="color: gray; font-size: 0.9em;">Mollie Fee: €0.00</p>
+                            <p class="cc_fee" style="color: gray; font-size: 0.9em;">or CC Processing fee 1.80% + €0.25</p>
+                            <button onclick="showCustomerInfo()">Buy</button>
+                        </div>
+                        <div class="customer_info" style="display: none;">
+                            <h3>Customer Information</h3>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="phone">Phone (optional):</label>
+                            <input type="tel" id="phone" name="phone">
+                            <p style="font-size: 0.9em; color: gray;">Phone number is optional and will be used to coordinate for the order.</p>
+                            <button onclick="showOverview()">Overview</button>
+                        </div>
+                        <div class="overview" style="display: none;">
+                            <h3>Order Overview</h3>
+                            <p class="order_details"></p>
+                            <button onclick="submitOrder()">Submit Order</button>
                         </div>
                     </div>
                 </div>
