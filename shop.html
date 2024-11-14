@@ -170,6 +170,11 @@
                         </div>
                     </div>
                     <div class="right_side">
+                        <div class="progress_bar">
+                            <div class="step" id="step1">Order</div>
+                            <div class="step" id="step2">Details</div>
+                            <div class="step" id="step3">Overview</div>
+                        </div>
                         <div class="cart">
                             <h3>My cart</h3>
                             <p class="stop_message" style="display: none; color: red; font-weight: bold;">Please stop</p>
@@ -191,11 +196,13 @@
                             <input type="tel" id="phone" name="phone">
                             <p style="font-size: 0.9em; color: gray;">Phone number is optional and will be used to coordinate for the order.</p>
                             <button onclick="showOverview()">Overview</button>
+                            <button onclick="showCart()">Back</button>
                         </div>
                         <div class="overview" style="display: none;">
                             <h3>Order Overview</h3>
                             <p class="order_details"></p>
                             <button onclick="submitOrder()">Submit Order</button>
+                            <button onclick="showCustomerInfo()">Back</button>
                         </div>
                     </div>
                 </div>
