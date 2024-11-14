@@ -116,6 +116,10 @@ function updateSubtotal(amount) {
 function showCustomerInfo() {
     document.querySelector('.cart').style.display = 'none';
     document.querySelector('.customer_info').style.display = 'block';
+    document.querySelector('.overview').style.display = 'none';
+    document.querySelector('#step1').classList.remove('active');
+    document.querySelector('#step2').classList.add('active');
+    document.querySelector('#step3').classList.remove('active');
 }
 
 function showOverview() {
@@ -136,6 +140,15 @@ function showOverview() {
 
     document.querySelector('.customer_info').style.display = 'none';
     document.querySelector('.overview').style.display = 'block';
+    document.querySelector('#step2').classList.remove('active');
+    document.querySelector('#step3').classList.add('active');
+}
+
+function showCart() {
+    document.querySelector('.customer_info').style.display = 'none';
+    document.querySelector('.cart').style.display = 'block';
+    document.querySelector('#step2').classList.remove('active');
+    document.querySelector('#step1').classList.add('active');
 }
 
 function submitOrder() {
