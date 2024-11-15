@@ -127,7 +127,6 @@ function updateSubtotal(amount) {
     document.querySelector('.cart .subtotal').textContent = `Subtotal: €${subtotal.toFixed(2)}`;
 
     document.getElementById('cart-sum').textContent = `Sum: €${subtotal.toFixed(2)}`;
-    document.getElementById('mobile-cart-sum').textContent = `Sum: €${subtotal.toFixed(2)}`;
 }
 
 function showCustomerInfo() {
