@@ -21,7 +21,7 @@ function toggleFunction() {
 const productImages = {
     "StudSec T-shirt": ["StudSecShirtBlue_Front.jpg", "StudSecShirtBlue_Back.jpg"],
     "StudSec Hoodie": ["StudSecHoodieBlue_Front.jpg", "StudSecHoodieBlue_Back.jpg"],
-    "Stickers": ["Stickers1.png", "Stickers2.png"]
+    "Stickers": ["sticker.png"]
 };
 
 const imagePath = "images/products/";
@@ -67,6 +67,7 @@ function addToCart(button) {
     const price = parseFloat(itemContent.querySelector('.price_item').textContent);
 
     const cart = document.querySelector('.cart ul');
+    // Ensure the cart is empty by default
     if (!cart) {
         const cartDiv = document.querySelector('.cart');
         const ul = document.createElement('ul');
@@ -103,6 +104,14 @@ function addToCart(button) {
     }
 
 }
+function showCustomerInfo() {
+    document.querySelector('.cart').style.display = 'none';
+    document.querySelector('.customer_info').style.display = 'block';
+    document.querySelector('.overview').style.display = 'none';
+    document.querySelector('#step1').classList.remove('active');
+    document.querySelector('#step2').classList.add('active');
+    document.querySelector('#step3').classList.remove('active');
+}
 
 function removeFromCart(button, amount) {
     const cartItem = button.closest('li');
@@ -129,25 +138,35 @@ function updateSubtotal(amount) {
     document.getElementById('cart-sum').textContent = `Sum: €${subtotal.toFixed(2)}`;
 }
 
-function showCustomerInfo() {
-    document.querySelector('.cart').style.display = 'none';
-    document.querySelector('.customer_info').style.display = 'block';
-    document.querySelector('.overview').style.display = 'none';
-    document.querySelector('#step1').classList.remove('active');
-    document.querySelector('#step2').classList.add('active');
-    document.querySelector('#step3').classList.remove('active');
-}
-
-function showOverview() {
+async function showOverview() {
     const name = document.querySelector('#name').value;
     const email = document.querySelector('#email').value;
     const phone = document.querySelector('#phone').value;
+
+    const items = Array.from(document.querySelectorAll('.cart ul li')).map(li => {
+        const [quantity, name] = li.querySelector('.item_name').textContent.split(' x ');
+        const size = name.match(/\(Size: (.+)\)/)[1];
+        const productId = getProductIdByName(name.replace(` (Size: ${size})`, ''));
+        return {
+            product_id: productId,
+            variant: size,
+            quantity: parseInt(quantity)
+        };
+    });
+
+    const stockPromises = items.map(item => checkStock(item));
+    const stockResults = await Promise.all(stockPromises);
+
+    const stockMessage = stockResults.every(result => result.available) 
+        ? 'Available for pickup' 
+        : 'Delivery time: 10 days';
 
     const orderDetails = `
         <p>Name: ${name}</p>
         <p>Email: ${email}</p>
         <p>Phone: ${phone}</p>
         <p>Subtotal: ${document.querySelector('.cart .subtotal').textContent}</p>
+        <p>${stockMessage}</p>
     `;
 
     document.querySelector('.order_details').innerHTML = orderDetails;
@@ -158,6 +177,27 @@ function showOverview() {
     document.querySelector('#step3').classList.add('active');
 }
 
+async function checkStock(item) {
+    try {
+        const response = await fetch('http://127.0.0.1:5000/api/checkstock', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(item)
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+        return { available: false };
+    }
+}
+
 function showCart() {
     document.querySelector('.customer_info').style.display = 'none';
     document.querySelector('.cart').style.display = 'block';
@@ -165,9 +205,57 @@ function showCart() {
     document.querySelector('#step1').classList.add('active');
 }
 
-function submitOrder() {
-    alert('Order submitted!');
-    // Add order submission logic here
+async function submitOrder() {
+    const name = document.querySelector('#name').value;
+    const email = document.querySelector('#email').value;
+    const phone = document.querySelector('#phone').value;
+
+    const items = Array.from(document.querySelectorAll('.cart ul li')).map(li => {
+        const [quantity, name] = li.querySelector('.item_name').textContent.split(' x ');
+        const size = name.match(/\(Size: (.+)\)/)[1];
+        const productId = getProductIdByName(name.replace(` (Size: ${size})`, ''));
+        return {
+            product_id: productId,
+            variant: size,
+            quantity: parseInt(quantity)
+        };
+    });
+
+    const orderData = {
+        customer_email: email,
+        customer_name: name,
+        customer_number: phone,
+        send_email: false,
+        items: items
+    };
+
+    try {
+        const response = await fetch('http://127.0.0.1:5000/api/createorder', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(orderData)
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        const data = await response.json();
+        window.location.href = data.payment_link;
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
+}
+
+function getProductIdByName(name) {
+    const productIds = {
+        "StudSec T-shirt": 1,
+        "StudSec Hoodie": 2,
+        "Stickers": 3
+    };
+    return productIds[name] || null;
 }
 
 function toggleCart() {
