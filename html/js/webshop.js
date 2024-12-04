@@ -179,7 +179,7 @@ async function showOverview() {
 
 async function checkStock(item) {
     try {
-        const response = await fetch('http://127.0.0.1:5000/api/checkstock', {
+        const response = await fetch('https://zero.studsec.nl/api/checkstock', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -230,7 +230,7 @@ async function submitOrder() {
     };
 
     try {
-        const response = await fetch('http://127.0.0.1:5000/api/createorder', {
+        const response = await fetch('https://zero.studsec.nl/api/createorder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
