@@ -75,3 +75,15 @@ body, html {
   padding: 10px 20px;
   font-size: 16px;
 }
+
+.w3-row-padding.w3-center .w3-col {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.sponsor-logo {
+  height: 100px; /* Set the desired height */
+  width: 100%; /* Fill the width of the column */
+  object-fit: contain; /* Ensure the aspect ratio is maintained */
+}
