@@ -1,0 +1,117 @@
+/* General Styling */
+body, html {
+    font-family: 'Lato', sans-serif;
+    height: 100%;
+    margin: 0;
+  }
+  
+  /* Background Section using poster image */
+  .background {
+    background-image: url('../images/vuctf/VU\ CTF\ 2025.png'); /* Replace with your poster file */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 50px;
+  }
+  
+  /* Overlay for darker tone and content readability */
+  .overlay {
+    background: rgba(0, 0, 0, 0.7);
+    min-height: 100vh; /* full viewport height */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+  /* Content container */
+  .content {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Title and date styling */
+  .title {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .date {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+  
+  /* Register button styling */
+  .register-btn {
+    background: #008080;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .register-btn:hover {
+    background: #005555;
+  }
+  
+  /* Description styling */
+  .description {
+    margin-top: 20px;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  
+  /* FAQ Section Styling */
+  .faq-section {
+    margin-top: 40px;
+    text-align: left;
+  }
+  
+  .faq-section h2 {
+    margin-bottom: 20px;
+  }
+  
+  /* FAQ item styling using details/summary */
+  .faq-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .faq-question {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 1.1em;
+  }
+  
+  .faq-answer {
+    margin: 10px 0 0 20px;
+    font-size: 1em;
+  }
+  
+  /* Media Query for Responsiveness */
+  @media screen and (max-width: 600px) {
+    .title {
+      font-size: 2em;
+    }
+    
+    .date {
+      font-size: 1em;
+    }
+    
+    .faq-answer {
+      font-size: 0.9em;
+    }
+    
+    .register-btn {
+      padding: 10px 20px;
+      font-size: 0.9em;
+    }
+  }
