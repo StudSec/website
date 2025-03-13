@@ -115,3 +115,42 @@ body, html {
       font-size: 0.9em;
     }
   }
+
+  /* Timeline Section Styling */
+.timeline {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.timeline h2 {
+  margin-bottom: 20px;
+}
+
+.timeline-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.timeline-time {
+  font-weight: bold;
+  padding: 5px;
+  font-size: 1.1em;
+}
+
+.timeline-event {
+  margin: 10px 0 0 20px;
+  font-size: 1em;
+}
+
+/* Media Query for Timeline Responsiveness */
+@media screen and (max-width: 600px) {
+  .timeline-time {
+    font-size: 1em;
+  }
+  
+  .timeline-event {
+    font-size: 0.9em;
+  }
+}
