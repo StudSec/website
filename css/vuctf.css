@@ -144,6 +144,30 @@ body, html {
   font-size: 1em;
 }
 
+/* Schedule Section Styling */
+.schedule {
+  margin-top: 40px;
+  text-align: left;
+}
+.schedule h2 {
+  margin-bottom: 20px;
+}
+.schedule-item {
+  margin-bottom: 15px;
+}
+.schedule-event-line {
+  font-weight: bold;
+  margin: 0;
+}
+.schedule-location {
+  margin: 5px 0 0 15px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+.schedule-location i {
+  margin-right: 5px;
+}
+
 /* Media Query for Timeline Responsiveness */
 @media screen and (max-width: 600px) {
   .timeline-time {
