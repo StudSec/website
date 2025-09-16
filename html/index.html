@@ -1,193 +1,245 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>StudSec</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="VU Student CyberSecurity Association">
-<!-- meta tags for linkedin cause we ARE NOT STORM-->
-<meta name="title" property="og:title" content="StudSec">
-<meta property="og:type" content="Informative Website">
-<meta name="image" property="og:image" content="https://studsec.nl/images/studsec_with_background_unoptimized.png">
-<meta name="description" property="og:description" content="Lowering the barrier to entry in this ever more difficult field We are StudSec,a CyberSecurity Association within VU Amsterdam dedicated to lowering the barrier to entry in the CyberSecurity field.">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Import bootstrap -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">    
-<link rel="icon" href="images/favi.png">
-<script src="js/nav.js"></script>
 
-<link rel="stylesheet" href="css/index.css">
+<head>
+  <title>StudSec</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="VU Student CyberSecurity Association">
+  <!-- meta tags for linkedin cause we ARE NOT STORM-->
+  <meta name="title" property="og:title" content="StudSec">
+  <meta property="og:type" content="Informative Website">
+  <meta name="image" property="og:image" content="https://studsec.nl/images/studsec_with_background_unoptimized.png">
+  <meta name="description" property="og:description"
+    content="Lowering the barrier to entry in this ever more difficult field We are StudSec,a CyberSecurity Association within VU Amsterdam dedicated to lowering the barrier to entry in the CyberSecurity field.">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Import bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="icon" href="images/favi.png">
+  <script src="js/nav.js"></script>
+
+  <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" 
-       href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-       <i class="fa fa-bars"></i>
-    </a>
-    <a href="index.html#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="index.html#calendar" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-calendar"></i> CALENDAR</a>
-    <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-trophy"></i> CTF</a>
-    <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-book"></i> WIKI</a>
-    <a href="https://shop.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-shopping-cart"></i> SHOP</a>
-    <a href="contact.html#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="contact.html#faq" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-question-circle"></i> FAQ</a>
-    <a href="https://blog.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-newspaper-o"></i> BLOG</a>
-    <a href="https://studsec.nl/vuctf" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-flag"></i> VUCTF</a>
-    <a href="signup.html" class="w3-button w3-round-large" id="signup-button"><i class="fa fa-check-square-o"></i>Join us</a>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
+        onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="index.html#home" class="w3-bar-item w3-button">HOME</a>
+      <a href="index.html#calendar" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-calendar"></i>
+        CALENDAR</a>
+      <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-trophy"></i> CTF</a>
+      <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-book"></i> WIKI</a>
+      <a href="https://shop.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-shopping-cart"></i>
+        SHOP</a>
+      <a href="contact.html#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i>
+        CONTACT</a>
+      <a href="contact.html#faq" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-question-circle"></i>
+        FAQ</a>
+      <a href="https://blog.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-newspaper-o"></i>
+        BLOG</a>
+      <a href="https://studsec.nl/vuctf" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-flag"></i>
+        VUCTF</a>
+      <a href="signup.html" class="w3-button w3-round-large" id="signup-button"><i class="fa fa-check-square-o"></i>Join
+        us</a>
+    </div>
+
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <!-- Navbar on small screens -->
+      <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
+      <a href="index.html#calendar" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+          class="fa fa-calendar"></i> CALENDAR</a>
+      <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+          class="fa fa-trophy"></i> CTF</a>
+      <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+          class="fa fa-book"></i> WIKI</a>
+      <a href="https://shop.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+          class="fa fa-shopping-cart"></i> SHOP</a>
+      <a href="contact.html#contact" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+          class="fa fa-envelope"></i> CONTACT</a>
+      <a href="contact.html#faq" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+          class="fa fa-question-circle"></i> FAQ</a>
+      <a href="https://blog.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+          class="fa fa-newspaper"></i> BLOG</a>
+      <a href="https://studsec.nl/vuctf" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+          class="fa fa-flag"></i> VUCTF</a>
+      <a href="signup.html" class="w3-bar-item w3-button w3-round-large" onclick="toggleFunction()"><i
+          class="fa fa-check-square-o"></i> Join us</a>
+    </div>
   </div>
 
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <!-- Navbar on small screens -->
-    <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
-    <a href="index.html#calendar" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-calendar"></i> CALENDAR</a>
-    <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-trophy"></i> CTF</a>
-    <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-book"></i> WIKI</a>
-    <a href="https://shop.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-shopping-cart"></i> SHOP</a>
-    <a href="contact.html#contact" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="contact.html#faq" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-question-circle"></i> FAQ</a>
-    <a href="https://blog.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-newspaper"></i> BLOG</a>
-    <a href="https://studsec.nl/vuctf" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-flag"></i> VUCTF</a>
-    <a href="signup.html" class="w3-bar-item w3-button w3-round-large" onclick="toggleFunction()"><i class="fa fa-check-square-o"></i> Join us</a>
+  <!-- First Parallax Image with Logo Text -->
+  <div class="bgimg-1 w3-display-container " id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <img class="logo-title" src="images/studsec-wbg.svg" alt="Logo" style="width:50%;">
+      <!-- put studsec_logo.png in the logo-->
+      <span class="logo-title w3-center w3-padding-large w3-black w3-xlarge w3-wide "> STUDSEC</span>
+    </div>
   </div>
-</div>
 
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container " id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <img class="logo-title" src="images/studsec-wbg.svg" alt="Logo" style="width:50%;">
-    <!-- put studsec_logo.png in the logo-->
-    <span class="logo-title w3-center w3-padding-large w3-black w3-xlarge w3-wide ">  STUDSEC</span>
+  <!-- Container (About Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">ABOUT US</h3>
+    <p class="w3-center"><em>Lowering the barrier to entry in this ever more difficult field</em></p>
+    <p>
+      We are StudSec, a Student CyberSecurity Association based at VU Amsterdam, committed to making the CyberSecurity
+      field more accessible to every student. Our mission is fulfilled through hosting workshops and tutorials across
+      various sectors of cybersecurity, complemented by continuous mentorship from industry professionals. Our goal is
+      to offer a platform for students to learn and grow through practical experience, networking, and knowledge
+      sharing.
+    </p>
+    <p>
+      We understand that cybersecurity might not appeal to everyone, but we firmly believe that everyone has the
+      potential to succeed in this field. To put this belief into action, we strive to make our basic workshops
+      accessible to individuals with zero background knowledge. By doing so, we empower them to apply security
+      principles to everyone, ultimately contributing to a safer world.
+    </p>
+    <p>
+      Moreover, we are a non-profit organization. Over the past three years, we have largely funded our activities out
+      of pocket because we are driven by a desire for systematic change. We do not discriminate or selectively support
+      social causes and collaborations; instead, we encourage participation from everyone, regardless of their
+      background. We are dedicated to fostering a safe and inclusive environment where everyone feels welcome and
+      supported.
+    </p>
+    <p>
+      We also provide a platform for students to share their knowledge and experiences with others. Join our community
+      and connect with like-minded individuals <a target="_blank" href="https://discord.gg/Ce5mrVBzqP">here</a>.
+    </p>
+    <p class="w3-large w3-center w3-padding-16">Our story:</p>
+    <p>
+      Starting from 2 students working in cybersecurity in september 2021, today
+      we have over 400 students with a wide range of skill levels, from experienced professionals to eager new students
+      just starting out.
+      We are holding bi-weekly events and training sessions in order to expand the general community awareness,
+      as well as technical workshops related to cybersecurity for both offensive and defensive operations.
+      Our motive for the mentors of this community are to provide the helping hand nobody had years ago, when
+      cybersecurity was still a new field.
+    </p>
   </div>
-</div>
 
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT US</h3>
-  <p class="w3-center"><em>Lowering the barrier to entry in this ever more difficult field</em></p>
-  <p>
-    We are StudSec, a Student CyberSecurity Association based at VU Amsterdam, committed to making the CyberSecurity field more accessible to every student. Our mission is fulfilled through hosting workshops and tutorials across various sectors of cybersecurity, complemented by continuous mentorship from industry professionals. Our goal is to offer a platform for students to learn and grow through practical experience, networking, and knowledge sharing.
-  </p>
-  <p>
-    We understand that cybersecurity might not appeal to everyone, but we firmly believe that everyone has the potential to succeed in this field. To put this belief into action, we strive to make our basic workshops accessible to individuals with zero background knowledge. By doing so, we empower them to apply security principles to everyone, ultimately contributing to a safer world.
-  </p>
-  <p>
-    Moreover, we are a non-profit organization. Over the past three years, we have largely funded our activities out of pocket because we are driven by a desire for systematic change. We do not discriminate or selectively support social causes and collaborations; instead, we encourage participation from everyone, regardless of their background. We are dedicated to fostering a safe and inclusive environment where everyone feels welcome and supported.
-  </p>
-  <p>
-    We also provide a platform for students to share their knowledge and experiences with others. Join our community and connect with like-minded individuals <a target="_blank" href="https://discord.gg/Ce5mrVBzqP">here</a>.
-  </p>
-  <p class="w3-large w3-center w3-padding-16">Our story:</p>
-  <p>
-    Starting from 2 students working in cybersecurity in september 2021, today 
-    we have over 400 students with a wide range of skill levels, from experienced professionals to eager new students just starting out. 
-    We are holding bi-weekly events and training sessions in order to expand the general community awareness, 
-    as well as technical workshops related to cybersecurity for both offensive and defensive operations. 
-    Our motive for the mentors of this community are to provide the helping hand nobody had years ago, when cybersecurity was still a new field.
-  </p>
-</div>
-  
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  
+  <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+
     <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">1</span><br>
-    Nation-Wide CTF
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">26+</span><br>
-    Workshops Hosted
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">420+</span><br>
-    Members
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">24+</span><br>
-    Hack N' Chill Meetings
-  </div>
-</div>
-
-<div class="w3-content w3-container w3-padding-64" id="calendar">  
-<h3 class="w3-center">Our calendar</h3> 
-<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FBrussels&bgcolor=%23ffffff&title=StudSec&src=c_7973268d7a019bd2b163e02c1af626467a52ad62d02ccb71f6d6c16c5a2ec694%40group.calendar.google.com&src=Y19lZWQwYmM4NjM0MDdmZjdiZGY3NmNlOTAwYjgwODJmNTZlZmQyNGZkMTcxMDQ1YzQzNGZlMDg4MzA0YWE1MmQzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23EF6C00" style="border:solid 1px #777; width: 100%;" height="600" frameborder="0" scrolling="no" class="w3-center gcalendar"></iframe></div>
-</div>
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section w3-padding-16">
-    <span class="w3-xlarge w3-center-align">Workshops</span><br>
-    <p style="text-align: justify;padding: 10px; padding-left: 20px; padding-right: 20px;">Workshops are educational events where students can learn about a specific topic in cybersecurity. They are hosted by our mentors and are open to all members, regardless of their skill level!</p>
-  </div>
-  <div class="w3-quarter w3-section w3-padding-16">
-    <span class="w3-xlarge">HnCs</span><br>
-    <p style="text-align: justify; padding: 10px;">Hack N' Chill meetings are a casual event where students can come together and work on their own projects, or work on challenges together. They are hosted by our members!</p>
-  </div>
-  <div class="w3-quarter w3-section w3-padding-16">
-    <span class="w3-xlarge">CTFs</span><br>
-    <p style="text-align: justify; padding: 10px;">CTFs are a type of cybersecurity competition where students can solve challenges in order to gain points. We participate as team VUBar in various CTFs and are open to all members.</p>
-  </div>
-  <div class="w3-quarter w3-section w3-padding-16">
-    <span class="w3-xlarge">Events</span><br>
-    <p style="text-align: justify; padding: 10px; padding-left: 20px; padding-right: 20px">Other events are educational or social events that are not workshops, HnCs or CTFs. They are hosted by our mentors and are open to all members, usually focusing on a specific initiative.</p>
-  </div>
-</div>
-
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-16" id="portfolio">
-  <h3 class="w3-center">WE ARE SUPPORTED BY</h3>
-  <p class="w3-center"><em>Here are some of the organisations helping us carry out our mission.</em></p><br>
-
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col s3 m3">
-      <img src="images/vubar.png" class="w3-hover-opacity sponsor-logo" alt="vubar logo" onclick="window.open('https://vusec.net/', '_blank')">
+      <span class="w3-xlarge">1</span><br>
+      Nation-Wide CTF
     </div>
-    <div class="w3-col s3 m3">
-      <img src="images/do.png" class="w3-hover-opacity sponsor-logo" alt="do logo" onclick="window.open('https://www.digitalocean.com/', '_blank')">
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">26+</span><br>
+      Workshops Hosted
     </div>
-    <div class="w3-col s3 m3">
-      <img src="images/VU-logo-RGB.svg" class="w3-hover-opacity sponsor-logo" alt="vu logo" onclick="window.open('https://www.vu.nl/', '_blank')">
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">420+</span><br>
+      Members
     </div>
-    <div class="w3-col s3 m3">
-      <img src="images/csd.png" class="w3-hover-opacity sponsor-logo" alt="csd logo" onclick="window.open('https://www.cybersecuritydistrict.com/', '_blank')">
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">24+</span><br>
+      Hack N' Chill Meetings
     </div>
   </div>
-</div>
 
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
+  <div class="w3-content w3-container w3-padding-64" id="calendar">
+    <h3 class="w3-center">Our calendar</h3>
+    <iframe
+      src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FBrussels&bgcolor=%23ffffff&title=StudSec&src=c_7973268d7a019bd2b163e02c1af626467a52ad62d02ccb71f6d6c16c5a2ec694%40group.calendar.google.com&src=Y19lZWQwYmM4NjM0MDdmZjdiZGY3NmNlOTAwYjgwODJmNTZlZmQyNGZkMTcxMDQ1YzQzNGZlMDg4MzA0YWE1MmQzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23EF6C00"
+      style="border:solid 1px #777; width: 100%;" height="600" frameborder="0" scrolling="no"
+      class="w3-center gcalendar"></iframe>
   </div>
-</div>
-
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">Get in Touch</span>
   </div>
-</div>
+  <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+    <div class="w3-quarter w3-section w3-padding-16">
+      <span class="w3-xlarge w3-center-align">Workshops</span><br>
+      <p style="text-align: justify;padding: 10px; padding-left: 20px; padding-right: 20px;">Workshops are educational
+        events where students can learn about a specific topic in cybersecurity. They are hosted by our mentors and are
+        open to all members, regardless of their skill level!</p>
+    </div>
+    <div class="w3-quarter w3-section w3-padding-16">
+      <span class="w3-xlarge">HnCs</span><br>
+      <p style="text-align: justify; padding: 10px;">Hack N' Chill meetings are a casual event where students can come
+        together and work on their own projects, or work on challenges together. They are hosted by our members!</p>
+    </div>
+    <div class="w3-quarter w3-section w3-padding-16">
+      <span class="w3-xlarge">CTFs</span><br>
+      <p style="text-align: justify; padding: 10px;">CTFs are a type of cybersecurity competition where students can
+        solve challenges in order to gain points. We participate as team VUBar in various CTFs and are open to all
+        members.</p>
+    </div>
+    <div class="w3-quarter w3-section w3-padding-16">
+      <span class="w3-xlarge">Events</span><br>
+      <p style="text-align: justify; padding: 10px; padding-left: 20px; padding-right: 20px">Other events are
+        educational or social events that are not workshops, HnCs or CTFs. They are hosted by our mentors and are open
+        to all members, usually focusing on a specific initiative.</p>
+    </div>
+  </div>
 
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
+  <!-- Container (Portfolio Section) -->
+  <div class="w3-content w3-container w3-padding-16" id="portfolio">
+    <h3 class="w3-center">WE ARE SUPPORTED BY</h3>
+    <p class="w3-center"><em>Here are some of the organisations helping us carry out our mission.</em></p><br>
 
-<!-- Contact Section -->
-<!-- Contact Section --> 
-<!-- Contact Section --> 
-<div class="w3-content w3-container w3-padding-64" id="contact"> 
-    <p class="w3-center w3-large">We’d love to hear from you!</p>
-    
-    <p>If you have any questions, comments, or inquiries, please feel free to reach out to us. Our dedicated team is here to assist you. For further information and Frequently Asked Questions, you can visit our <a href="contact.html#faq" class="w3-text-blue">FAQ page</a>.</p> 
+    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+    <div class="w3-row-padding w3-center">
+      <div class="w3-col s3 m3">
+        <img src="images/vubar.png" class="w3-hover-opacity sponsor-logo" alt="vubar logo"
+          onclick="window.open('https://vusec.net/', '_blank')">
+      </div>
+      <div class="w3-col s3 m3">
+        <img src="images/SURF_fc.png" class="w3-hover-opacity sponsor-logo" alt="surf logo"
+          onclick="window.open('https://www.surf.nl/', '_blank')">
+      </div>
+      <div class="w3-col s3 m3">
+        <img src="images/VU-logo-RGB.svg" class="w3-hover-opacity sponsor-logo" alt="vu logo"
+          onclick="window.open('https://www.vu.nl/', '_blank')">
+      </div>
+      <div class="w3-col s3 m3">
+        <img src="images/csd.png" class="w3-hover-opacity sponsor-logo" alt="csd logo"
+          onclick="window.open('https://www.cybersecuritydistrict.com/', '_blank')">
+      </div>
+    </div>
+  </div>
 
-    <div class="w3-center w3-margin-top">
-        <a href="/contact.html#contact" class="w3-button w3-black w3-hover-orange w3-round-large w3-margin-right">Contact Us</a>
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+    <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
+        class="fa fa-remove"></i></span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption" class="w3-opacity w3-large"></p>
+    </div>
+  </div>
+
+  <!-- Third Parallax Image with Portfolio Text -->
+  <div class="bgimg-3 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">Get in Touch</span>
+    </div>
+  </div>
+
+  <!-- Container (Contact Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="contact">
+
+    <!-- Contact Section -->
+    <!-- Contact Section -->
+    <!-- Contact Section -->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+      <p class="w3-center w3-large">We’d love to hear from you!</p>
+
+      <p>If you have any questions, comments, or inquiries, please feel free to reach out to us. Our dedicated team is
+        here to assist you. For further information and Frequently Asked Questions, you can visit our <a
+          href="contact.html#faq" class="w3-text-blue">FAQ page</a>.</p>
+
+      <div class="w3-center w3-margin-top">
+        <a href="/contact.html#contact"
+          class="w3-button w3-black w3-hover-orange w3-round-large w3-margin-right">Contact Us</a>
         <a href="/contact.html#faq" class="w3-button w3-blue w3-hover-light-blue w3-round-large">Visit FAQ</a>
+      </div>
     </div>
-</div>
 </body>
 
 <!-- Footer -->
@@ -195,12 +247,14 @@
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
     <i class="fa bi bi-discord w3-hover-opacity" onclick="window.open('https://url.studsec.nl/discord', '_blank')"></i>
-    <i class="fa bi bi-github w3-hover-opacity" onclick="window.open('https://github.com/StudSec/', '_blank')"></i>	
-    <i class="fa bi bi-linkedin w3-hover-opacity" onclick="window.open('https://www.linkedin.com/company/vustudsec/', '_blank')"></i>
-    <i class="fa bi bi-instagram w3-hover-opacity" onclick="window.open('https://www.instagram.com/studsec.nl/', '_blank')"></i>
+    <i class="fa bi bi-github w3-hover-opacity" onclick="window.open('https://github.com/StudSec/', '_blank')"></i>
+    <i class="fa bi bi-linkedin w3-hover-opacity"
+      onclick="window.open('https://www.linkedin.com/company/vustudsec/', '_blank')"></i>
+    <i class="fa bi bi-instagram w3-hover-opacity"
+      onclick="window.open('https://www.instagram.com/studsec.nl/', '_blank')"></i>
     <i class="fa bi bi-twitter w3-hover-opacity" onclick="window.open('https://twitter.com/vustudsec/', '_blank')"></i>
   </div>
 </footer>
- 
+
 
 </html>
