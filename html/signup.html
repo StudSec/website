@@ -2,72 +2,87 @@
 <html>
 
 <head>
-    <title>Sign Up - StudSec</title>
-    <meta charset="UTF-8">
-    <script src="js/nav.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Sign up for StudSec, the CyberSecurity Association at VU Amsterdam">
-    <!-- meta tags for linkedin cause we ARE NOT STORM-->
-    <meta name="title" property="og:title" content="Sign Up - StudSec">
-    <meta property="og:type" content="Informative Website">
-    <meta name="image" property="og:image" content="https://studsec.nl/images/studsec_with_background_unoptimized.png">
-    <meta name="description" property="og:description"
-        content="Join StudSec and become a part of a dedicated CyberSecurity community.">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Import bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <link rel="icon" href="images/favi.png">
-    <link rel="stylesheet" href="css/signup.css">
+  <title>Sign Up - StudSec</title>
+  <meta charset="UTF-8">
+  <script src="js/nav.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sign up for StudSec, the CyberSecurity Association at VU Amsterdam">
+  <!-- meta tags for linkedin cause we ARE NOT STORM-->
+  <meta name="title" property="og:title" content="Sign Up - StudSec">
+  <meta property="og:type" content="Informative Website">
+  <meta name="image" property="og:image" content="https://studsec.nl/images/studsec_with_background_unoptimized.png">
+  <meta name="description" property="og:description"
+    content="Join StudSec and become a part of a dedicated CyberSecurity community.">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Import bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="icon" href="images/favi.png">
+  <link rel="stylesheet" href="css/signup.css">
 </head>
 
 <body>
 
   <div class="w3-top">
     <div class="w3-bar" id="myNavbar">
-      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" 
-         href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-         <i class="fa fa-bars"></i>
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
+        onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
       </a>
       <a href="index.html#home" class="w3-bar-item w3-button">HOME</a>
-      <a href="index.html#calendar" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-calendar"></i> CALENDAR</a>
+      <a href="index.html#calendar" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-calendar"></i>
+        CALENDAR</a>
       <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-trophy"></i> CTF</a>
       <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-book"></i> WIKI</a>
-      <a href="https://shop.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-shopping-cart"></i> SHOP</a>
-      <a href="contact.html#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-      <a href="contact.html#faq" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-question-circle"></i> FAQ</a>
-      <a href="https://blog.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-newspaper-o"></i> BLOG</a>
-      <a href="https://studsec.nl/vuctf" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-flag"></i> VUCTF</a>
-      <a href="signup.html" class="w3-button w3-round-large" id="signup-button"><i class="fa fa-check-square-o"></i>Join us</a>
+      <a href="https://shop.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-shopping-cart"></i>
+        SHOP</a>
+      <a href="contact.html#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i>
+        CONTACT</a>
+      <a href="contact.html#faq" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-question-circle"></i>
+        FAQ</a>
+      <a href="https://blog.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-newspaper-o"></i>
+        BLOG</a>
+      <a href="https://studsec.nl/vuctf" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-flag"></i>
+        VUCTF</a>
+      <a href="signup.html" class="w3-button w3-round-large" id="signup-button"><i class="fa fa-check-square-o"></i>Join
+        us</a>
     </div>
-  
+
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
       <!-- Navbar on small screens -->
       <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
-      <a href="index.html#calendar" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-calendar"></i> CALENDAR</a>
-      <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-trophy"></i> CTF</a>
-      <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-book"></i> WIKI</a>
-      <a href="https://shop.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-shopping-cart"></i> SHOP</a>
-      <a href="contact.html#contact" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-envelope"></i> CONTACT</a>
-      <a href="contact.html#faq" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-question-circle"></i> FAQ</a>
-      <a href="https://blog.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-newspaper"></i> BLOG</a>
-      <a href="https://studsec.nl/vuctf" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-flag"></i> VUCTF</a>
-      <a href="signup.html" class="w3-bar-item w3-button w3-round-large" onclick="toggleFunction()"><i class="fa fa-check-square-o"></i> Join us</a>
+      <a href="index.html#calendar" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+          class="fa fa-calendar"></i> CALENDAR</a>
+      <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+          class="fa fa-trophy"></i> CTF</a>
+      <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+          class="fa fa-book"></i> WIKI</a>
+      <a href="https://shop.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+          class="fa fa-shopping-cart"></i> SHOP</a>
+      <a href="contact.html#contact" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+          class="fa fa-envelope"></i> CONTACT</a>
+      <a href="contact.html#faq" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+          class="fa fa-question-circle"></i> FAQ</a>
+      <a href="https://blog.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+          class="fa fa-newspaper"></i> BLOG</a>
+      <a href="https://studsec.nl/vuctf" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+          class="fa fa-flag"></i> VUCTF</a>
+      <a href="signup.html" class="w3-bar-item w3-button w3-round-large" onclick="toggleFunction()"><i
+          class="fa fa-check-square-o"></i> Join us</a>
     </div>
   </div>
-<div class="bgimg-1 w3-display-container " id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <img class="logo-title" src="images/studsec-wbg.svg" alt="Logo" style="width:50%;">
-    <!-- put studsec_logo.png in the logo-->
-    <span class="logo-title w3-center w3-padding-large w3-black w3-xlarge w3-wide ">Welcome <br> to StudSec</span>
+  <div class="bgimg-1 w3-display-container " id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <img class="logo-title" src="images/studsec-wbg.svg" alt="Logo" style="width:50%;">
+      <!-- put studsec_logo.png in the logo-->
+      <span class="logo-title w3-center w3-padding-large w3-black w3-xlarge w3-wide ">Welcome to StudSec</span>
+    </div>
   </div>
-</div>
 
 
-    <!-- Container (Sign Up Section) -->
-    <div class="w3-content w3-container w3-padding-64" id="signup">
+  <!-- Container (Sign Up Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="signup">
     <h3 class="w3-center">SIGN UP</h3>
     <p class="w3-center"><em>Join our community and start your journey in CyberSecurity!</em></p>
     <!-- Enhanced section for committees description -->
@@ -78,39 +93,46 @@
       <div class="w3-third w3-section">
         <i class="fa fa-rocket fa-2x w3-margin-bottom"></i>
         <h4>Advanced Learning Opportunities</h4>
-        <p>Participate in advanced workshops, guest lectures, and specialized sessions to delve deeper into complex cybersecurity topics beyond the basic curriculum.</p>
+        <p>Participate in advanced workshops, guest lectures, and specialized sessions to delve deeper into complex
+          cybersecurity topics beyond the basic curriculum.</p>
       </div>
       <div class="w3-third w3-section">
         <i class="fa fa-trophy fa-2x w3-margin-bottom"></i>
         <h4>Competition Excellence</h4>
-        <p>Compete internationally with our renowned CTF Team VUBar, consistently ranked among the best Dutch teams globally. Beginners can also join our team to learn and grow in CTF events.</p>
+        <p>Compete internationally with our renowned CTF Team VUBar, consistently ranked among the best Dutch teams
+          globally. Beginners can also join our team to learn and grow in CTF events.</p>
       </div>
       <div class="w3-third w3-section">
         <i class="fa fa-users fa-2x w3-margin-bottom"></i>
         <h4>Community and Networking</h4>
-        <p>Connect with fellow members through social activities like borrels, meetups, and various events, fostering a supportive and vibrant community.</p>
+        <p>Connect with fellow members through social activities like borrels, meetups, and various events, fostering a
+          supportive and vibrant community.</p>
       </div>
       <div class="w3-third w3-section">
         <i class="fa fa-briefcase fa-2x w3-margin-bottom"></i>
         <h4>Internship Bridge Program</h4>
-        <p>Access our dedicated program to secure internships in the cybersecurity field, bridging the gap between academic learning and professional experience.</p>
+        <p>Access our dedicated program to secure internships in the cybersecurity field, bridging the gap between
+          academic learning and professional experience.</p>
       </div>
       <div class="w3-third w3-section">
         <i class="fa fa-cogs fa-2x w3-margin-bottom"></i>
         <h4>Committee Involvement</h4>
-        <p>Play an active role in our organization by joining committees. Help plan and execute events, workshops, and CTFs, gaining valuable leadership, organizational and or technical skills.</p>
+        <p>Play an active role in our organization by joining committees. Help plan and execute events, workshops, and
+          CTFs, gaining valuable leadership, organizational and or technical skills.</p>
       </div>
-  </div>
+    </div>
 
 
     <!-- New section for committees description -->
     <div class="w3-center w3-padding-32">
       <h4>Our Committees</h4>
-      <p>StudSec is organized into several committees, each with its own set of responsibilities and focus areas. Below is a brief description of each committee. 
-         For more information on the committees, please visit the <a href="https://wiki.studsec.nl/books/committees">wiki</a>.
+      <p>StudSec is organized into several committees, each with its own set of responsibilities and focus areas. Below
+        is a brief description of each committee.
+        For more information on the committees, please visit the <a
+          href="https://wiki.studsec.nl/books/committees">wiki</a>.
       </p>
     </div>
-  
+
     <div class="w3-row-padding w3-center w3-padding-32" id="committees">
       <div class="w3-third w3-section">
         <i class="fa fa-calendar fa-2x w3-margin-bottom"></i>
@@ -120,12 +142,14 @@
       <div class="w3-third w3-section">
         <i class="fa fa-graduation-cap fa-2x w3-margin-bottom"></i>
         <h4>Workshops</h4>
-        <p>Organizes and prepares workshops centered around cybersecurity topics. Documentation is also handled by this committee.</p>
+        <p>Organizes and prepares workshops centered around cybersecurity topics. Documentation is also handled by this
+          committee.</p>
       </div>
       <div class="w3-third w3-section">
         <i class="fa fa-cogs fa-2x w3-margin-bottom"></i>
         <h4>Infrastructure</h4>
-        <p>Maintains and improves StudSec’s infrastructure, including the CTF platform and Discord bot, and manages challenges.</p>
+        <p>Maintains and improves StudSec’s infrastructure, including the CTF platform and Discord bot, and manages
+          challenges.</p>
       </div>
       <div class="w3-third w3-section">
         <i class="fa fa-trophy fa-2x w3-margin-bottom"></i>
@@ -135,20 +159,23 @@
       <div class="w3-third w3-section">
         <i class="fa fa-users fa-2x w3-margin-bottom"></i>
         <h4>CTF Team</h4>
-        <p>Manages the CTF team, planning events, coordinating players, and ensuring everything is organized for participation.</p>
+        <p>Manages the CTF team, planning events, coordinating players, and ensuring everything is organized for
+          participation.</p>
       </div>
       <div class="w3-third w3-section">
         <i class="fa fa-money fa-2x w3-margin-bottom"></i>
         <h4>ScroogeCie</h4>
-        <p>Verifies our financial records at the end of the year and presents any findings during the final member meeting.</p>
+        <p>Verifies our financial records at the end of the year and presents any findings during the final member
+          meeting.</p>
       </div>
     </div>
-  
+
     <div class="w3-center w3-padding-32">
       <p><em>Scroll down to fill out the form and join StudSec!</em></p>
-      <p>The membership fee is 5 euros according to the <a href="https://wiki.studsec.nl/books/rules-statutes" target="_blank">statutes and house rules</a>.</p>
+      <p>The membership fee is 5 euros according to the <a href="https://wiki.studsec.nl/books/rules-statutes"
+          target="_blank">statutes and house rules</a>.</p>
     </div>
-  
+
     <div class="w3-row-padding w3-center">
       <form id="signup-form" class="w3-container w3-card-4 w3-light-grey w3-text-black w3-margin">
         <h2 class="w3-center">Sign Up Form</h2>
@@ -180,10 +207,12 @@
         <div class="w3-row w3-section">
           <div class="w3-col" style="width:50px">
             <i class="w3-xxlarge fa fa-phone"></i>
-            <i class="fa fa-info-circle w3-small" title="This number will be used in case of emergencies, such as feeling unwell during an event. Optional"></i>
+            <i class="fa fa-info-circle w3-small"
+              title="This number will be used in case of emergencies, such as feeling unwell during an event. Optional"></i>
           </div>
           <div class="w3-rest">
-            <input class="w3-input w3-border" name="emergency_contact_phone" type="text" placeholder="Emergency Contact Phone (Optional)">
+            <input class="w3-input w3-border" name="emergency_contact_phone" type="text"
+              placeholder="Emergency Contact Phone (Optional)">
           </div>
         </div>
         <div class="w3-row w3-section">
@@ -191,7 +220,8 @@
           <div class="w3-rest">
             <select class="w3-select w3-border" name="educational_institute" id="educational-institute" required>
               <option value="" disabled selected>Choose your educational institute</option>
-              <option value="VU Amsterdam (Vrije Universiteit Amsterdam)">VU Amsterdam (Vrije Universiteit Amsterdam)</option>
+              <option value="VU Amsterdam (Vrije Universiteit Amsterdam)">VU Amsterdam (Vrije Universiteit Amsterdam)
+              </option>
               <option value="UvA (Universiteit van Amsterdam)">UvA (Universiteit van Amsterdam)</option>
               <option value="HvA (Hogeschool van Amsterdam)">HvA (Hogeschool van Amsterdam)</option>
               <option value="Other">Other</option>
@@ -201,7 +231,15 @@
         <div class="w3-row w3-section" id="other-institute-section" style="display:none;">
           <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-university"></i></div>
           <div class="w3-rest">
-            <input class="w3-input w3-border" name="other_institute" type="text" placeholder="Please specify your educational institute">
+            <input class="w3-input w3-border" name="other_institute" type="text"
+              placeholder="Please specify your educational institute">
+          </div>
+        </div>
+        <div class="w3-row w3-section" id="student-number-section" style="display:none;">
+          <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-university"></i></div>
+          <div class="w3-rest">
+            <input class="w3-input w3-border" name="student_number" type="text"
+              placeholder="Please specify your student number">
           </div>
         </div>
         <div class="w3-row w3-section">
@@ -214,7 +252,10 @@
           <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-picture-o"></i></div>
           <div class="w3-rest">
             <p>Do we have permission to post pictures containing your face on social media?</p>
-            <p>At StudSec, we value your privacy. Before each event, we kindly ask attendees for permission to take photographs for social media promotions. To streamline our logistics and ensure a smooth experience for everyone, it's helpful for us to know your preferences in advance. Please note that you can change your option at any time.</p>
+            <p>At StudSec, we value your privacy. Before each event, we kindly ask attendees for permission to take
+              photographs for social media promotions. To streamline our logistics and ensure a smooth experience for
+              everyone, it's helpful for us to know your preferences in advance. Please note that you can change your
+              option at any time.</p>
             <label>
               <input class="w3-radio" name="permission_to_post_pictures" type="radio" value="true" required>
               Yes, I consent to having pictures of me on social media.
@@ -236,102 +277,118 @@
       </form>
     </div>
   </div>
-  
+
   <div class="w3-container w3-center w3-padding-32">
     <a href="index.html" class="w3-button w3-black w3-round-large">Back to Home</a>
   </div>
 
-    <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-        <a href="#" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-        <div class="w3-xlarge w3-section">
-            <i class="fa bi bi-discord w3-hover-opacity" onclick="window.open('https://url.studsec.nl/discord', '_blank')"></i>
-            <i class="fa bi bi-github w3-hover-opacity" onclick="window.open('https://github.com/StudSec/', '_blank')"></i>
-            <i class="fa bi bi-linkedin w3-hover-opacity"
-                onclick="window.open('https://www.linkedin.com/company/vustudsec/', '_blank')"></i>
-            <i class="fa bi bi-instagram w3-hover-opacity"
-                onclick="window.open('https://www.instagram.com/studsec.nl/', '_blank')"></i>
-            <i class="fa bi bi-twitter w3-hover-opacity"
-                onclick="window.open('https://twitter.com/vustudsec/', '_blank')"></i>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+    <a href="#" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+      <i class="fa bi bi-discord w3-hover-opacity"
+        onclick="window.open('https://url.studsec.nl/discord', '_blank')"></i>
+      <i class="fa bi bi-github w3-hover-opacity" onclick="window.open('https://github.com/StudSec/', '_blank')"></i>
+      <i class="fa bi bi-linkedin w3-hover-opacity"
+        onclick="window.open('https://www.linkedin.com/company/vustudsec/', '_blank')"></i>
+      <i class="fa bi bi-instagram w3-hover-opacity"
+        onclick="window.open('https://www.instagram.com/studsec.nl/', '_blank')"></i>
+      <i class="fa bi bi-twitter w3-hover-opacity"
+        onclick="window.open('https://twitter.com/vustudsec/', '_blank')"></i>
+    </div>
+  </footer>
 
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <script>
-        // Change style of navbar on scroll
-        window.onscroll = function () { myFunction() };
-        function myFunction() {
-            var navbar = document.getElementById("myNavbar");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-            } else {
-                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-            }
-        }
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script>
+    // Change style of navbar on scroll
+    window.onscroll = function () { myFunction() };
+    function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+      } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+      }
+    }
 
-        // Used to toggle the menu on small screens when clicking on the menu button
-        function toggleFunction() {
-            var x = document.getElementById("navDemo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function toggleFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
 
-        document.getElementById('educational-institute').addEventListener('change', function() {
-          var otherInstituteSection = document.getElementById('other-institute-section');
-          if (this.value === 'Other') {
-            otherInstituteSection.style.display = 'block';
+    document.getElementById('educational-institute').addEventListener('change', function () {
+      var otherInstituteSection = document.getElementById('other-institute-section');
+      if (this.value === 'Other') {
+        otherInstituteSection.style.display = 'block';
+      } else {
+        otherInstituteSection.style.display = 'none';
+      }
+
+      var studentNumberSection = document.getElementById('student-number-section');
+      if (this.value === 'VU Amsterdam (Vrije Universiteit Amsterdam)') {
+        studentNumberSection.style.display = 'block';
+        studentNumberSection.querySelector('input').setAttribute('required', 'required');
+      } else {
+        studentNumberSection.style.display = 'none';
+        studentNumberSection.querySelector('input').removeAttribute('required');
+      }
+    });
+
+    document.getElementById('signup-form').addEventListener('submit', async function (event) {
+      event.preventDefault();
+      const formData = new FormData(event.target);
+      const data = Object.fromEntries(formData.entries());
+      data.permission_to_post_pictures = formData.get('permission_to_post_pictures') === 'true';
+      if (data.educational_institute === 'Other') {
+        data.educational_institute = formData.get('other_institute');
+      }
+      if (data.educational_institute === 'VU Amsterdam (Vrije Universiteit Amsterdam)') {
+        data.student_number = formData.get('student_number');
+      } else {
+        // Fully remove the student_number field if not VU
+        delete data.student_number;
+      }
+
+      // Validate date of birth format
+      const dobPattern = /^\d{4}-\d{2}-\d{2}$/;
+      if (!dobPattern.test(data.date_of_birth)) {
+        document.getElementById('error-message').innerText = 'Invalid Date of Birth. Please use the format YYYY-MM-DD.';
+        document.getElementById('error-message').style.display = 'block';
+        return;
+      }
+
+      try {
+        const response = await fetch('https://one.studsec.nl/api/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*' // Allow CORS
+          },
+          mode: 'cors', // Ensure CORS is handled
+          body: JSON.stringify(data)
+        });
+        const result = await response.json();
+        if (response.ok) {
+          window.location.href = result.payment_link;
+        } else {
+          if (result.error === 'Member already exists') {
+            document.getElementById('error-message').innerText = 'This email is already registered. Please use a different email.';
           } else {
-            otherInstituteSection.style.display = 'none';
+            document.getElementById('error-message').innerText = result.message;
           }
-        });
-
-        document.getElementById('signup-form').addEventListener('submit', async function(event) {
-          event.preventDefault();
-          const formData = new FormData(event.target);
-          const data = Object.fromEntries(formData.entries());
-          data.permission_to_post_pictures = formData.get('permission_to_post_pictures') === 'true';
-          if (data.educational_institute === 'Other') {
-            data.educational_institute = formData.get('other_institute');
-          }
-
-          // Validate date of birth format
-          const dobPattern = /^\d{4}-\d{2}-\d{2}$/;
-          if (!dobPattern.test(data.date_of_birth)) {
-            document.getElementById('error-message').innerText = 'Invalid Date of Birth. Please use the format YYYY-MM-DD.';
-            document.getElementById('error-message').style.display = 'block';
-            return;
-          }
-      
-          try {
-            const response = await fetch('https://one.studsec.nl/api/signup', {
-              method: 'POST',
-              headers: { 
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*' // Allow CORS
-              },
-              mode: 'cors', // Ensure CORS is handled
-              body: JSON.stringify(data)
-            });
-            const result = await response.json();
-            if (response.ok) {
-              window.location.href = result.payment_link;
-            } else {
-              if (result.error === 'Member already exists') {
-                document.getElementById('error-message').innerText = 'This email is already registered. Please use a different email.';
-              } else {
-                document.getElementById('error-message').innerText = result.message;
-              }
-              document.getElementById('error-message').style.display = 'block';
-            }
-          } catch (error) {
-            document.getElementById('error-message').innerText = 'Error: ' + error.message;
-            document.getElementById('error-message').style.display = 'block';
-          }
-        });
-    </script>
+          document.getElementById('error-message').style.display = 'block';
+        }
+      } catch (error) {
+        document.getElementById('error-message').innerText = 'Error: ' + error.message;
+        document.getElementById('error-message').style.display = 'block';
+      }
+    });
+  </script>
 </body>
 
 </html>
