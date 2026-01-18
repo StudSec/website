@@ -1,228 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>StudSec Webshop</title>
-        <link href="css/webshop.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    </head>
 
-    <body>
-        <header>
-            <img class="image" src="images/main_image.jpg" alt="Main Picture">
-            <!-- <div class="logo"> -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudSec Webshop</title>
+    <link href="css/webshop.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <img class="image" src="images/main_image.jpg" alt="Main Picture">
+        <!-- <div class="logo"> -->
+        </div>
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar" id="myNavbar">
+                <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                    href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <a href="index.html#home" class="w3-bar-item w3-button">HOME</a>
+                <a href="index.html#calendar" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-calendar"></i>
+                    CALENDAR</a>
+                <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i
+                        class="fa fa-trophy"></i>
+                    CTF</a>
+                <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-book"></i>
+                    WIKI</a>
+                <a href="contact.html#contact" class="w3-bar-item w3-button w3-hide-small"><i
+                        class="fa fa-envelope"></i>
+                    CONTACT</a>
+                <a href="contact.html#faq" class="w3-bar-item w3-button w3-hide-small"><i
+                        class="fa fa-question-circle"></i>
+                    FAQ</a>
+                <a href="https://blog.studsec.nl" class="w3-bar-item w3-button w3-hide-small"><i
+                        class="fa fa-newspaper-o"></i> BLOG</a>
+                <a href="shop.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-shopping-cart"></i>
+                    SHOP</a>
+                <a href="signup.html" class="w3-button w3-round-large" id="signup-button"><i
+                        class="fa fa-check-square-o"></i>Join us</a>
             </div>
-                    <!-- Navbar (sit on top) -->
-                    <div class="w3-top">
-                        <div class="w3-bar" id="myNavbar">
-                        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                        <a href="#home" class="w3-bar-item w3-button w3-text-light-grey">HOME</a>
-                        <a href="index.html#calendar" class="w3-bar-item w3-button w3-hide-small w3-text-light-grey"><i class="fa fa-calendar"></i> CALENDAR</a>
-                        <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button w3-hide-small w3-text-light-grey"><i class="fa fa-trophy"></i>CTF</a>
-                        <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button w3-hide-small w3-text-light-grey"><i class="fa fa fa-book"></i>WIKI</a>
-                        <a href="shop.html" class="w3-bar-item w3-button w3-hide-small w3-text-light-grey"><i class="fa fa-shopping-cart"></i> SHOP</a>
-                        <a href="contact.html#contact" class="w3-bar-item w3-button w3-hide-small w3-text-light-grey"><i class="fa fa-envelope"></i> CONTACT</a>
-                        <a href="contact.html#faq" class="w3-bar-item w3-button w3-hide-small w3-text-light-grey"><i class="fa fa-question-circle"></i> FAQ</a>
-                        <a href="signup.html" class="w3-button w3-round-large w3-text-light-grey" id="signup-button"><i class="fa fa-check-square-o"></i>Join us</a>
-                        </div>
-                    
-                        <!-- Navbar on small screens -->
-                        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-                        <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
-                        <a href="index.html#calendar" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-calendar"></i> CALENDAR</a>
-                        <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-trophy"></i> CTF</a>
-                        <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa fa-book"></i> WIKI</a>
-                        <a href="shop.html" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-shopping-cart"></i> SHOP</a>
-                        <a href="contact.html#contact" class="w3-bar-item w3-button" onclick="toggleFunction()"><i class="fa fa-envelope"></i> CONTACT</a>
-                        <a href="contact.html#faq" class="w3-bar-item w3-button w3-hide-small" onclick="toggleFunction()"><i class="fa fa-question-circle"></i> FAQ</a>
-                        <a href="signup.html" class="w3-bar-item w3-button w3-round-large" onclick="toggleFunction()"><i class="fa fa-check-square-o"></i> Join us</a>
+
+            <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+                <!-- Navbar on small screens -->
+                <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
+                <a href="index.html#calendar" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+                        class="fa fa-calendar"></i> CALENDAR</a>
+                <a href="https://ctf.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+                        class="fa fa-trophy"></i> CTF</a>
+                <a href="https://wiki.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+                        class="fa fa-book"></i> WIKI</a>
+                <a href="contact.html#contact" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+                        class="fa fa-envelope"></i> CONTACT</a>
+                <a href="contact.html#faq" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+                        class="fa fa-question-circle"></i> FAQ</a>
+                <a href="https://blog.studsec.nl" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+                        class="fa fa-newspaper"></i> BLOG</a>
+                <a href="shop.html" class="w3-bar-item w3-button" onclick="toggleFunction()"><i
+                        class="fa fa-shopping-cart"></i> SHOP</a>
+                <a href="signup.html" class="w3-bar-item w3-button w3-round-large" onclick="toggleFunction()"><i
+                        class="fa fa-check-square-o"></i> Join us</a>
+            </div>
+        </div>
+
+        </div>
+    </header>
+
+
+
+    <main>
+        <div class="container_all">
+            <div class="title_container">
+                <h1>Merchandise Shop</h1>
+                <button class="mobile-cart-icon" onclick="toggleCart()">
+                    <i class="fa fa-shopping-cart"></i> Show cart
+                </button>
+                <span id="cart-sum" class="cart-sum-text dark-text">Sum: €0.00</span>
+            </div>
+            <hr class="line">
+
+            <div class="container_shop">
+                <div class="items" id="items">
+                    <div class="item">
+                        <div class="item_content">
+                            <div class="img_container">
+                                <img src="images/products/StudSecShirtBlue_Front.jpg" alt="StudSec T-shirt"
+                                    class="image_item">
+                                <button class="arrow_left" onclick="prevImage(this)">
+                                    <span class="material-symbols-outlined">arrow_back_ios</span>
+                                </button>
+                                <button class="arrow_right" onclick="nextImage(this)">
+                                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                                </button>
+                                <button class="magnifier" onclick="magnifyImage(this)">
+                                    <span class="material-symbols-outlined">zoom_in</span>
+                                </button>
+                            </div>
+                            <p class="name_item">StudSec T-shirt</p>
+                            <p class="description_item">Comfortable and stylish T-shirt with StudSec logo.</p>
+                            <p class="price_item">15.00</p>
+                            <div class="size_quantity_container">
+                                <label for="size">
+                                    <span class="material-symbols-outlined">straighten</span>
+                                </label>
+                                <select name="size" id="size" class="styled-select">
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                </select>
+                                <label for="quantity">
+                                    <span class="material-symbols-outlined">format_list_numbered</span>
+                                </label>
+                                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1"
+                                    class="styled-input">
+                            </div>
+                            <button class="add_to_cart" onclick="addToCart(this)">
+                                <span class="material-symbols-outlined">add_shopping_cart</span> Add to cart
+                            </button>
                         </div>
                     </div>
-        
-                </div>
-        </header>
-
-
-
-        <main>
-            <div class="container_all">
-                <div class="title_container">
-                    <h1>Merchandise Shop</h1>
-                    <button class="mobile-cart-icon" onclick="toggleCart()">
-                        <i class="fa fa-shopping-cart"></i> Show cart
-                    </button>
-                    <span id="cart-sum" class="cart-sum-text dark-text">Sum: €0.00</span>
-                </div>
-                <hr class="line">
-                
-                <div class="container_shop">
-                    <div class="items" id="items">
-                        <div class="item">
-                            <div class="item_content">
-                                <div class="img_container">
-                                    <img src="images/products/StudSecShirtBlue_Front.jpg" alt="StudSec T-shirt" class="image_item">
-                                    <button class="arrow_left" onclick="prevImage(this)">
-                                        <span class="material-symbols-outlined">arrow_back_ios</span>
-                                    </button>
-                                    <button class="arrow_right" onclick="nextImage(this)">
-                                        <span class="material-symbols-outlined">arrow_forward_ios</span>
-                                    </button>
-                                    <button class="magnifier" onclick="magnifyImage(this)">
-                                        <span class="material-symbols-outlined">zoom_in</span>
-                                    </button>
-                                </div>
-                                <p class="name_item">StudSec T-shirt</p>
-                                <p class="description_item">Comfortable and stylish T-shirt with StudSec logo.</p>
-                                <p class="price_item">15.00</p>
-                                <div class="size_quantity_container">
-                                    <label for="size">
-                                        <span class="material-symbols-outlined">straighten</span>
-                                    </label>
-                                    <select name="size" id="size" class="styled-select">
-                                        <option value="S">S</option>
-                                        <option value="M">M</option>
-                                        <option value="L">L</option>
-                                        <option value="XL">XL</option>
-                                    </select>
-                                    <label for="quantity">
-                                        <span class="material-symbols-outlined">format_list_numbered</span>
-                                    </label>
-                                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" class="styled-input">
-                                </div>
-                                <button class="add_to_cart" onclick="addToCart(this)">
-                                    <span class="material-symbols-outlined">add_shopping_cart</span> Add to cart
+                    <div class="item">
+                        <div class="item_content">
+                            <div class="img_container">
+                                <img src="images/products/StudSecHoodieBlue_Front.jpg" alt="StudSec Hoodie"
+                                    class="image_item">
+                                <button class="arrow_left" onclick="prevImage(this)">
+                                    <span class="material-symbols-outlined">arrow_back_ios</span>
+                                </button>
+                                <button class="arrow_right" onclick="nextImage(this)">
+                                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                                </button>
+                                <button class="magnifier" onclick="magnifyImage(this)">
+                                    <span class="material-symbols-outlined">zoom_in</span>
                                 </button>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="item_content">
-                                <div class="img_container">
-                                    <img src="images/products/StudSecHoodieBlue_Front.jpg" alt="StudSec Hoodie" class="image_item">
-                                    <button class="arrow_left" onclick="prevImage(this)">
-                                        <span class="material-symbols-outlined">arrow_back_ios</span>
-                                    </button>
-                                    <button class="arrow_right" onclick="nextImage(this)">
-                                        <span class="material-symbols-outlined">arrow_forward_ios</span>
-                                    </button>
-                                    <button class="magnifier" onclick="magnifyImage(this)">
-                                        <span class="material-symbols-outlined">zoom_in</span>
-                                    </button>
-                                </div>
-                                <p class="name_item">StudSec Hoodie</p>
-                                <p class="description_item">Warm and cozy hoodie with StudSec logo.</p>
-                                <p class="price_item">30.00</p>
-                                <div class="size_quantity_container">
-                                    <label for="size">
-                                        <span class="material-symbols-outlined">straighten</span>
-                                    </label>
-                                    <select name="size" id="size" class="styled-select">
-                                        <option value="S">S</option>
-                                        <option value="M">M</option>
-                                        <option value="L">L</option>
-                                        <option value="XL">XL</option>
-                                    </select>
-                                    <label for="quantity">
-                                        <span class="material-symbols-outlined">format_list_numbered</span>
-                                    </label>
-                                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" class="styled-input">
-                                </div>
-                                <button class="add_to_cart" onclick="addToCart(this)">
-                                    <span class="material-symbols-outlined">add_shopping_cart</span> Add to cart
-                                </button>
+                            <p class="name_item">StudSec Hoodie</p>
+                            <p class="description_item">Warm and cozy hoodie with StudSec logo.</p>
+                            <p class="price_item">30.00</p>
+                            <div class="size_quantity_container">
+                                <label for="size">
+                                    <span class="material-symbols-outlined">straighten</span>
+                                </label>
+                                <select name="size" id="size" class="styled-select">
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                </select>
+                                <label for="quantity">
+                                    <span class="material-symbols-outlined">format_list_numbered</span>
+                                </label>
+                                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1"
+                                    class="styled-input">
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="item_content">
-                                <div class="img_container">
-                                    <img src="images/products/sticker.png" alt="Stickers" class="image_item">
-                                    <button class="arrow_left" onclick="prevImage(this)">
-                                        <span class="material-symbols-outlined">arrow_back_ios</span>
-                                    </button>
-                                    <button class="arrow_right" onclick="nextImage(this)">
-                                        <span class="material-symbols-outlined">arrow_forward_ios</span>
-                                    </button>
-                                    <button class="magnifier" onclick="magnifyImage(this)">
-                                        <span class="material-symbols-outlined">zoom_in</span>
-                                    </button>
-                                </div>
-                                <p class="name_item">Stickers</p>
-                                <p class="description_item">Set of cool StudSec stickers.</p>
-                                <p class="price_item">3.00</p>
-                                <div class="size_quantity_container">
-                                    <label for="size">
-                                        <span class="material-symbols-outlined">straighten</span>
-                                    </label>
-                                    <select name="size" id="size" class="styled-select">
-                                        <option value="S">S</option>
-                                        <option value="M">M</option>
-                                        <option value="L">L</option>
-                                        <option value="XL">XL</option>
-                                    </select>
-                                    <label for="quantity">
-                                        <span class="material-symbols-outlined">format_list_numbered</span>
-                                    </label>
-                                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" class="styled-input">
-                                </div>
-                                <button class="add_to_cart" onclick="addToCart(this)">
-                                    <span class="material-symbols-outlined">add_shopping_cart</span> Add to cart
-                                </button>
-                            </div>
+                            <button class="add_to_cart" onclick="addToCart(this)">
+                                <span class="material-symbols-outlined">add_shopping_cart</span> Add to cart
+                            </button>
                         </div>
                     </div>
-                    <div class="cart-modal" id="cartModal">
-                        <div class="cart-modal-content">
-                            <span class="close" onclick="toggleCart()">&times;</span>
-                            <div class="progress_bar">
-                                <div class="step" id="step1">Order</div>
-                                <div class="step" id="step2">Details</div>
-                                <div class="step" id="step3">Overview</div>
+                    <div class="item">
+                        <div class="item_content">
+                            <div class="img_container">
+                                <img src="images/products/sticker.png" alt="Stickers" class="image_item">
+                                <button class="arrow_left" onclick="prevImage(this)">
+                                    <span class="material-symbols-outlined">arrow_back_ios</span>
+                                </button>
+                                <button class="arrow_right" onclick="nextImage(this)">
+                                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                                </button>
+                                <button class="magnifier" onclick="magnifyImage(this)">
+                                    <span class="material-symbols-outlined">zoom_in</span>
+                                </button>
                             </div>
-                            <div class="cart">
-                                <h3>My cart</h3>
-                                <p class="stop_message" style="display: none; color: red; font-weight: bold;">Please stop</p>
-                                <hr class="line">
-                                <ul>
-                                    <!-- Remove the default cart item -->
-                                </ul>
-                                <p class="subtotal">Subtotal: €0.00</p>
-                                <button onclick="showCustomerInfo()">Buy</button>
+                            <p class="name_item">Stickers</p>
+                            <p class="description_item">Set of cool StudSec stickers.</p>
+                            <p class="price_item">3.00</p>
+                            <div class="size_quantity_container">
+                                <label for="size">
+                                    <span class="material-symbols-outlined">straighten</span>
+                                </label>
+                                <select name="size" id="size" class="styled-select">
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                </select>
+                                <label for="quantity">
+                                    <span class="material-symbols-outlined">format_list_numbered</span>
+                                </label>
+                                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1"
+                                    class="styled-input">
                             </div>
-                            <div class="customer_info" style="display: none;">
-                                <h3>Customer Information</h3>
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" required>
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
-                                <label for="phone">Phone (optional):</label>
-                                <input type="tel" id="phone" name="phone">
-                                <p style="font-size: 0.9em; color: gray;">Phone number is optional and will be used to coordinate for the order.</p>
-                                <button onclick="showOverview()">Overview</button>
-                                <button onclick="showCart()">Back</button>
-                            </div>
-                            <div class="overview" style="display: none;">
-                                <h3>Order Overview</h3>
-                                <p class="order_details"></p>
-                                <button onclick="submitOrder()">Submit Order</button>
-                                <button onclick="showCustomerInfo()">Back</button>
-                            </div>
+                            <button class="add_to_cart" onclick="addToCart(this)">
+                                <span class="material-symbols-outlined">add_shopping_cart</span> Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-modal" id="cartModal">
+                    <div class="cart-modal-content">
+                        <span class="close" onclick="toggleCart()">&times;</span>
+                        <div class="progress_bar">
+                            <div class="step" id="step1">Order</div>
+                            <div class="step" id="step2">Details</div>
+                            <div class="step" id="step3">Overview</div>
+                        </div>
+                        <div class="cart">
+                            <h3>My cart</h3>
+                            <p class="stop_message" style="display: none; color: red; font-weight: bold;">Please stop
+                            </p>
+                            <hr class="line">
+                            <ul>
+                                <!-- Remove the default cart item -->
+                            </ul>
+                            <p class="subtotal">Subtotal: €0.00</p>
+                            <button onclick="showCustomerInfo()">Buy</button>
+                        </div>
+                        <div class="customer_info" style="display: none;">
+                            <h3>Customer Information</h3>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="phone">Phone (optional):</label>
+                            <input type="tel" id="phone" name="phone">
+                            <p style="font-size: 0.9em; color: gray;">Phone number is optional and will be used to
+                                coordinate for the order.</p>
+                            <button onclick="showOverview()">Overview</button>
+                            <button onclick="showCart()">Back</button>
+                        </div>
+                        <div class="overview" style="display: none;">
+                            <h3>Order Overview</h3>
+                            <p class="order_details"></p>
+                            <button onclick="submitOrder()">Submit Order</button>
+                            <button onclick="showCustomerInfo()">Back</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer>
-            <p>© 2024 StudSec</p>
-        </footer>
+    <footer>
+        <p>© 2024 StudSec</p>
+    </footer>
 
-        <script src="js/webshop.js"></script>
+    <script src="js/webshop.js"></script>
 
-        
-    </body>
+
+</body>
+
 </html>
