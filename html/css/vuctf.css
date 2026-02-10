@@ -254,6 +254,10 @@ h1 {
   gap: 10px;
 }
 
+.title-line span {
+  background: none;
+}
+
 .title-line::before,
 .title-line::after {
   content: "******************************************************************************************";
