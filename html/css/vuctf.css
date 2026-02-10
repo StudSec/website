@@ -266,3 +266,33 @@ h1 {
   mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
 }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  p,
+  i,
+  a {
+    font-size: 12px;
+  }
+
+  .register-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
