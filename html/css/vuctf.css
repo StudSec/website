@@ -73,7 +73,7 @@ article {
   margin-bottom: 240px;
 }
 
-.content>div>div {
+.content>section>div {
   padding-left: 3%;
   padding-right: 3%;
 }
@@ -103,6 +103,10 @@ h1 {
     -1px -1px 0 rgb(0, 255, 238),
     -2px -2px 0 rgb(255, 0, 0),
     -3px -3px 0 rgb(0, 0, 255);
+}
+
+* {
+  font-family: "Press Start 2P", system-ui;
 }
 
 .glitch-spontaneous {
