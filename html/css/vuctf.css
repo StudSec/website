@@ -259,6 +259,11 @@ h1 {
   text-align: center;
 }
 
+#sponsors img {
+  height: auto;
+  width: 30%;
+}
+
 .title-line {
   display: flex;
   align-items: center;
