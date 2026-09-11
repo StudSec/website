@@ -54,9 +54,15 @@ See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rule
 ## TODO:
 
 Protect links from bots
+
 Change the emails (leave only one?)
+
 Make pop-ups for the committees
+
 Make easy way to make promo pop ups for calendar events
+
 Link shop to prototype
+
 Link sign-up form to prototype
+
 Add easy way to make picture gallery
