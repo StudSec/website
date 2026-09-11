@@ -825,7 +825,8 @@ footer a {
 }
 .community-links {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 12px;
   align-self: center;
 }
@@ -860,6 +861,18 @@ footer a {
 .community-link:hover span {
   color: var(--paper);
 }
+.business-link {
+  border: 2px solid #fde454;
+  color: var(--ink);
+  background: #fff7c9;
+}
+.business-link:hover {
+  background: #ffeb7b;
+  color: var(--ink);
+}
+.business-link:hover span {
+  color: var(--ink);
+}
 .join-link {
   font-family: inherit;
   cursor: pointer;
@@ -870,6 +883,14 @@ footer a {
 .whatsapp {
   background: #edf8f0;
   border-color: #4f9d69;
+}
+.whatsapp:hover {
+  background:  #63bb5b;
+  border-color: #4f9d69;
+  color: var(--ink);
+}
+.whatsapp:hover span {
+  color: var(--ink);
 }
 @media (max-width: 760px) {
   .topbar {
@@ -1063,6 +1084,26 @@ footer a {
     28px "IBM Plex Sans",
     sans-serif;
   color: var(--blue);
+}
+
+.business-modal {
+  position: relative;
+  width: min(560px, 100%);
+  padding: 42px;
+  background: var(--paper);
+  border: 3px solid var(--blue);
+  box-shadow: 12px 12px 0 var(--blue);
+  color: var(--ink);
+}
+.business-modal h2 {
+  font:
+    25px/1.5 "Press Start 2P",
+    monospace;
+}
+.business-modal p:not(.kicker) {
+  font:
+    16px/1.7 "IBM Plex Sans",
+    sans-serif;
 }
 
 /* Final desktop overrides for the current content density */
