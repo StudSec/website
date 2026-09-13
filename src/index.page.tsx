@@ -1,10 +1,4 @@
-import { useState } from "react";
-import "./App.css";
-import logoBackground from "./assets/Logo_background.svg";
-import logoMark from "./assets/Logo_no_background.svg";
-import banner from "./assets/banner.png";
-import boardPhoto from "./assets/board.jpg";
-import foundersPhoto from "./assets/FOUNDERS.jpg";
+export const layout = "layouts/main.tsx";
 
 type EventItem = {
   date: string;
@@ -105,61 +99,52 @@ const committees = [
 ];
 
 const googleCalendarId =
-  import.meta.env.VITE_GOOGLE_CALENDAR_ID ||
   "c_e549343504837a8adaaa6db669a128f563ada1ad2587f0c0c1f0814db2606ba7@group.calendar.google.com";
 const googleCalendarEmbed = googleCalendarId
   ? `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(googleCalendarId)}&ctz=Europe%2FAmsterdam`
   : "https://calendar.google.com/calendar/";
 const googleCalendarSubscribe =
-  import.meta.env.VITE_GOOGLE_CALENDAR_SUBSCRIBE_URL ||
   "https://calendar.google.com/calendar/u/5?cid=Y19lNTQ5MzQzNTA0ODM3YThhZGFhYTZkYjY2OWExMjhmNTYzYWRhMWFkMjU4N2YwYzBjMWYwODE0ZGIyNjA2YmE3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20";
 
 function App() {
-  const [activeSection, setActiveSection] = useState("home");
-  const [cartCount, setCartCount] = useState(0);
-  const [signupOpen, setSignupOpen] = useState(false);
-  const [businessOpen, setBusinessOpen] = useState(false);
-  const [carouselIndex, setCarouselIndex] = useState(0);
-
-  const scrollTo = (section: string) => {
-    setActiveSection(section);
-    document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
-  };
-
+  let carouselIndex = 0;
+  let signupOpen = false;
+  let businessOpen = false;
   return (
-    <div className="site-shell">
+    <div className="site-shell" id="home">
       {/* TOP BAR */}
       <header className="topbar">
-        <button
+        <a
           className="brand"
-          onClick={() => scrollTo("home")}
+          href="#home"
           aria-label="StudSec home"
         >
-          <img src={logoBackground} alt="" />
+          <img src="/assets/Logo_background.svg" alt="" />
           <span>STUDSEC</span>
-        </button>
+        </a>
         <nav aria-label="Main navigation">
           {["home", "calendar", "about", "board", "shop"].map((item) => (
-            <button
+            <a
               className={
-                activeSection === item ? "nav-link active" : "nav-link"
+                //activeSection === item ? "nav-link active" : "nav-link"
+                "nav-link"
               }
               key={item}
-              onClick={() => scrollTo(item)}
+              href={`#${item}`}
             >
               {item === "calendar"
                 ? "Events"
                 : item[0].toUpperCase() + item.slice(1)}
-            </button>
+            </a>
           ))}
         </nav>
         <div className="top-actions">
           <button className="top-action" onClick={() => setSignupOpen(true)}>
             Join us
           </button>
-          <button className="top-action" onClick={() => scrollTo("contact")}>
+          <a className="top-action" href="#contact">
             Contact
-          </button>
+          </a>
           <a
             className="top-action wiki-action"
             href="https://wiki.studsec.nl/"
@@ -169,26 +154,18 @@ function App() {
             Wiki
           </a>
         </div>
-        <button
-          className="cart-button"
-          onClick={() => scrollTo("shop")}
-          aria-label={`Shopping cart with ${cartCount} items`}
-        >
-          Cart <span>{cartCount}</span>
-        </button>
       </header>
 
       <main>
         {/* INTRO PAGE */}
         <section
           className="hero-section"
-          id="home"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 75, 115, 0.3), rgba(0, 75, 115, 0.3)), url(${banner})`,
+            backgroundImage: `linear-gradient(rgba(0, 75, 115, 0.3), rgba(0, 75, 115, 0.3)), url("/assets/banner.png")`,
           }}
         >
           <div className="hero-copy">
-            <img className="hero-logo-image" src={logoMark} alt="StudSec" />
+            <img className="hero-logo-image" src="/assets/Logo_no_background.svg" alt="StudSec" />
             <div className="eyebrow hero-readable">
               <span className="status-dot" /> Student association · VU Amsterdam
               · system online
@@ -210,12 +187,12 @@ function App() {
               >
                 Join the community <span>↗</span>
               </button>
-              <button
+              <a
                 className="button button-primary"
-                onClick={() => scrollTo("calendar")}
+                href="#calendar"
               >
                 See upcoming events <span>↓</span>
-              </button>
+              </a>
             </div>
           </div>
           <div
@@ -334,7 +311,7 @@ function App() {
         <section className="section split-section" id="about">
           <figure className="about-visual founders-visual">
             <img
-              src={foundersPhoto}
+              src="/assets/FOUNDERS.jpg"
               alt="Aidan, Philip, and Pahal, StudSec founders"
             />
             <figcaption>OUR FOUNDERS AND THEIR ROOMBA</figcaption>
@@ -411,7 +388,7 @@ function App() {
             </div>
           </div>
           <figure className="board-photo">
-            <img src={boardPhoto} alt="StudSec board" />
+            <img src="/assets/board.jpg" alt="StudSec board" />
             <figcaption>
               Left to right: Elena, Franck, Nox, Kieran, Dace
             </figcaption>
