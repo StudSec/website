@@ -241,7 +241,7 @@
         <div class="w3-row w3-section">
           <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-robot"></i></div>
           <div class="w3-rest">
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAzs4z30nKGvXSP7"></div>
+            <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA"></div>
           </div>
         </div>
         <div id="error-message" class="w3-text-red" style="display:none;"></div>
@@ -332,7 +332,7 @@
       data.date_of_birth = "1990-01-01"
 
       try {
-        const response = await fetch('https://one.studsec.nl/api/signup', {
+        const response = await fetch('http://127.0.0.1:5000/api/signup', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
